@@ -7,7 +7,7 @@ BFRadialWaveHUD
 <br />
 
 >_Click the screenshot below for an animated gifv!_<br />
-[![Animated Screenshot](https://raw.githubusercontent.com/bfeher/BFRadialWaveHUD/master/BFRadialWaveHUDDemoFrame1.png)](http://i.imgur.com/HfkEER8.gifv)
+[![Animated Screenshot](https://raw.githubusercontent.com/bfeher/BFRadialWaveHUD/master/BFRadialWaveHUDDemoFrame1.png)](http://i.imgur.com/0A3E1aQ.gifv)
 
 
 About
