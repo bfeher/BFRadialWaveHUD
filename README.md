@@ -16,6 +16,17 @@ _BFRadialWaveHUD_ is a fully customizable progress HUD that supports fullscreen,
 The purpose of _BFRadialWaveViewHUD_ is to mesmerize and hypnotize your users into forgetting that they were waiting for something to load. Seriously, just stare at it for a while. Also to give glory to the hypnotoad. <br />
 _BFRadialWaveHUD_ uses [BFRadialWaveView](https://github.com/bfeher/BFRadialWaveView).
 
+
+Changes
+---------
+Please refer to this [CHANGELOG.md](https://github.com/bfeher/BFRadialWaveHUD/blob/master/CHANGELOG.md).
+
+
+To do:
+---------
++ Restart animations on app wake-up. (Note, this is something to fix for [BFRadialWaveView](https://github.com/bfeher/BFRadialWaveView))
+
+
 Modes
 ---------
 ```objective-c
