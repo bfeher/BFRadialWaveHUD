@@ -5,6 +5,11 @@ BFRadialWaveHUD
 > Note that this changelog was started very late, at version 1.2.4 Previous changes are lost to the All Father, forever to be unknown.
 
 
+1.2.9
+---------
++ ^ Moved BFRadialWaveHUD.xib to podspec resources.
+
+
 1.2.8
 ---------
 + ^ Fixed podspec bug. Podspec now includes the necessary BFRadialWaveHUD.xib file.
