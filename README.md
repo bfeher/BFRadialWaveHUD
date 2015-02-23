@@ -2,7 +2,7 @@ BFRadialWaveHUD
 =============
 [![CocoaPods](https://img.shields.io/cocoapods/v/BFRadialWaveHUD.svg?style=flat)](https://github.com/bfeher/BFRadialWaveHUD)
 
-> A progress HUD using BFRadialWaveView.
+> A progress HUD using [BFRadialWaveView](https://github.com/bfeher/BFRadialWaveView).
 > Huge thanks to github user [@kevin-hirsch](https://github.com/kevin-hirsch) for making his amazing [KVNProgress](https://github.com/kevin-hirsch/KVNProgress) HUD available under the MIT license! Most of the actual HUD code, as well as ALL of the image processing code is from that project. Thanks again! 
 <br />
 
