@@ -5,6 +5,11 @@ BFRadialWaveHUD
 > Note that this changelog was started very late, at version 1.2.4 Previous changes are lost to the All Father, forever to be unknown.
 
 
+1.2.7
+---------
++ ^ Fixed podspec bug, preventing pod from passing build.
+
+
 1.2.5
 ---------
 + ^ Put KVN files into Classes folder to fix sourcing issue.
