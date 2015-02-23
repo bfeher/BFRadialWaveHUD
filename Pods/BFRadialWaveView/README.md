@@ -131,7 +131,7 @@ Methods
 ### Fun
 ```objective-c
 /**
- *  Activate or deactivate disco mode.
+ *  Activate of Deactivate disco mode! This will rapidly cycle colors through your BFRadialWaveView. Without setting the colors explicitly, a rainbow is used.
  *
  *  @param on BOOL flag to turn disco mode on (YES) or off (NO).
  */
@@ -146,11 +146,14 @@ Properties
 /** The diameter of the view (including progress circle). */
 @property (nonatomic, readonly) CGFloat diameter;
 
-/** The color to set the success checkmark to. By default it is the same as the circleColor passed into the initializer or the setup. */
-@property UIColor *checkmarkColor;
+/** The UIColor to set the progress circle to. Default is the same as the circleColor passed into the initializer or the setup. */
+@property (nonatomic) UIColor *progressCircleColor;
 
-/** The color to set the failure cross to. By default it is the same as the circleColor passed into the initializer or the setup. */
-@property UIColor *crossColor;
+/** The UIColor to set the success checkmark to. By default it is the same as the circleColor passed into the initializer or the setup. */
+@property (nonatomic) UIColor *checkmarkColor;
+
+/** The UIColor to set the failure cross to. By default it is the same as the circleColor passed into the initializer or the setup. */
+@property (nonatomic) UIColor *crossColor;
 
 /** An NSArray of colors to use for disco mode. By default it is the rainbow. */
 @property (nonatomic) NSArray *discoColors;
@@ -166,7 +169,8 @@ Usage
 ---------
 >Be sure the check out the included demo app to see examples on how to use BFRadialWaveView.
 
-Add the _BFRadialWaveView_ header and implementation file to your project. (.h & .m)
+Add the _BFRadialWaveView_ header and implementation files to your project. (BFRadialWaveView.h & BFRadialWaveView.m)
+as well as the _BFGradientCALayer_ header and implementation files to your project. (BFGradientLayer.h & BFGradientLayer.m)
 
 ### Working Example
 ```objective-c
@@ -202,7 +206,7 @@ Learn more at http://cocoapods.org
 Add this to your podfile to add BFRadialWaveView to your project.
 ```ruby
 platform :ios, '7.1'
-pod 'BFRadialWaveView', '~> 1.1.24'
+pod 'BFRadialWaveView', '~> 1.2.1'
 ```
 
 

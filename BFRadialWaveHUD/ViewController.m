@@ -40,58 +40,6 @@
     [self.modeSegmentedControl setTitle:@"↙\U0000FE0E" forSegmentAtIndex:7];
     [self.modeSegmentedControl setTitle:@"←\U0000FE0E" forSegmentAtIndex:8];
     [self.modeSegmentedControl setTitle:@"↖\U0000FE0E" forSegmentAtIndex:9];
-
-    
-    /*BFRadialWaveHUD *hud = [[BFRadialWaveHUD alloc] initWithView:self.view
-                                                      fullScreen:NO
-                                                         circles:BFRadialWaveView_DefaultNumberOfCircles
-                                                     circleColor:nil
-                                                            mode:BFRadialWaveViewMode_North
-                                                     strokeWidth:BFRadialWaveView_DefaultCircleStrokeWidth];*/
-//    hud.tapToDismiss = YES;
-//    hud.disco = YES;
-//    hud.HUDColor = [UIColor colorWithWhite:0.9f alpha:0.85f];
-//    [hud updateCircleColor:[UIColor paperColorGray900]];
-    
-    
-    dispatch_main_after(0.5f, ^{
-//        [hud show];
-//        [hud showProgress:0.6f withMessage:nil];
-        dispatch_main_after(2.f, ^{
-            // Success:
-//            [hud updateCircleColor:[UIColor paperColorLightGreen]];
-//            [hud updateProgressCircleColor:[UIColor paperColorGreen]];
-            /*[hud showSuccessWithMessage:@"Success!\n(yay!)" completion:^(BOOL finished) {
-                NSLog(@"running success block (%@)...", finished ? @"YES" : @"NO");
-                [hud dismissAfterDelay:1.f withCompletion:^(BOOL finished) {
-                    NSLog(@"running dismiss block...");
-                }];
-            }];*/
-            
-            // Error:
-//            [hud updateCircleColor:[UIColor paperColorRedA400]];
-//            [hud updateProgressCircleColor:[UIColor paperColorRed]];
-            /*[hud showErrorWithMessage:@"Error\nOMG!" completion:^(BOOL finished) {
-                NSLog(@"running error block (%@)...", finished ? @"YES" : @"NO");
-                [hud dismissAfterDelay:1.f withCompletion:^(BOOL finished) {
-                    NSLog(@"running dismiss block...");
-                }];
-            }];*/
-            
-            // Dismiss:
-            /*[hud dismissWithCompletion:^(BOOL finished) {
-                NSLog(@"running dismiss block...");
-            }];*/
-            
-            // Other tests:
-//            [hud updateMessage:@"Loading...\nsome more..."];
-//            [hud setDisco:NO];
-//            [hud updateCircleColor:[UIColor redColor]];
-//            [hud setMessageColor:[UIColor redColor]];
-//            [hud setMessageFont:[UIFont boldSystemFontOfSize:30]];
-//            [hud setHUDColor:[UIColor blueColor]];
-        });
-    });
 }
 
 - (void)didReceiveMemoryWarning {
@@ -200,6 +148,8 @@
 
 - (IBAction)showCustom:(UIButton *)sender
 {
+    self.successFailSwitch = !self.successFailSwitch;
+    
     BFRadialWaveHUD *hud = [[BFRadialWaveHUD alloc] initWithView:self.view
                                                       fullScreen:self.fullScreenSwitch.isOn
                                                          circles:20
@@ -211,13 +161,35 @@
     hud.backgroundFadeColor = [UIColor colorWithWhite:0.13f alpha:0.6f];
     [hud setBlurBackground:self.blurSwitch.isOn];
     hud.tapToDismiss = YES;
-    [hud showWithMessage:@"Try me in other modes too!\n(and check out my custom disco)"];
+    [hud showProgress:0.f withMessage:@"Try me in other modes too!\n(and check out my custom disco)"];
+    hud.progressCircleColor = [UIColor paperColorLightGreen100];
+    [self updateProgressForCustomHUD:hud];
+    
     NSArray *discoColors = @[[UIColor paperColorIndigoA100],
                              [UIColor paperColorIndigoA200],
                              [UIColor paperColorIndigoA400],
                              [UIColor paperColorIndigoA700]];
     [hud setDiscoColors:discoColors];
     [hud disco:self.discoSwitch.isOn];
+    
+    dispatch_main_after(5.5f, ^{
+        if (self.successFailSwitch) {
+            hud.progressCircleColor = [UIColor paperColorLightBlue];
+            hud.checkmarkColor = [UIColor paperColorLightBlueA200];
+            [hud showSuccessWithMessage:@"Success!" completion:^(BOOL finished) {
+                NSLog(@"success handler...");
+                [hud dismissAfterDelay:0.6f];
+            }];
+        }
+        else {
+            hud.progressCircleColor = [UIColor paperColorRed];
+            hud.crossColor = [UIColor paperColorRedA200];
+            [hud showErrorWithMessage:@"Error!" completion:^(BOOL finished) {
+                NSLog(@"Error handler...");
+                [hud dismissAfterDelay:0.6f];
+            }];
+        }
+    });
 }
 
 
@@ -235,6 +207,28 @@
     });
     dispatch_main_after(3.7f, ^{
         [hud updateProgress:0.93f];
+    });
+    dispatch_main_after(5.0f, ^{
+        [hud updateProgress:0.96f];
+    });
+}
+
+- (void)updateProgressForCustomHUD:(BFRadialWaveHUD *)hud
+{
+    dispatch_main_after(2.0f, ^{
+        [hud updateProgress:0.3f];
+    });
+    dispatch_main_after(2.5f, ^{
+        [hud updateProgress:0.5f];
+        hud.progressCircleColor = [UIColor paperColorLightGreen300];
+    });
+    dispatch_main_after(2.8f, ^{
+        [hud updateProgress:0.6f];
+        hud.progressCircleColor = [UIColor paperColorLightGreen600];
+    });
+    dispatch_main_after(3.7f, ^{
+        [hud updateProgress:0.93f];
+        hud.progressCircleColor = [UIColor paperColorLightGreen900];
     });
     dispatch_main_after(5.0f, ^{
         [hud updateProgress:0.96f];

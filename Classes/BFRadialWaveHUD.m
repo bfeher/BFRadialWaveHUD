@@ -231,6 +231,27 @@ static CGFloat const BFRadialWaveHUD_ContentViewWithoutStatusCornerRadius = 15.0
     [self updateBackground];
 }
 
+- (void)setProgressCircleColor:(UIColor *)progressCircleColor
+{
+    if (!progressCircleColor) { return; }
+    _progressCircleColor = progressCircleColor;
+    [self.radialWaveView setProgressCircleColor:progressCircleColor];
+}
+
+- (void)setCheckmarkColor:(UIColor *)checkmarkColor
+{
+    if (!checkmarkColor) { return; }
+    _checkmarkColor = checkmarkColor;
+    [self.radialWaveView setCheckmarkColor:checkmarkColor];
+}
+
+- (void)setCrossColor:(UIColor *)crossColor
+{
+    if (!crossColor) { return; }
+    _crossColor = crossColor;
+    [self.radialWaveView setCrossColor:crossColor];
+}
+
 - (void)setDiscoColors:(NSArray *)discoColors
 {
     _discoColors = discoColors;
@@ -302,6 +323,7 @@ static CGFloat const BFRadialWaveHUD_ContentViewWithoutStatusCornerRadius = 15.0
     self.messageColor = self.circleColor;
     self.HUDColor = [UIColor colorWithWhite:0.13f alpha:0.85f];
     self.backgroundFadeColor = [UIColor colorWithWhite:1.f alpha:0.6f];
+    self.progressCircleColor = self.circleColor;
     self.checkmarkColor = self.circleColor;
     self.crossColor = self.circleColor;
     self.tapToDismiss = NO;
@@ -665,11 +687,6 @@ static CGFloat const BFRadialWaveHUD_ContentViewWithoutStatusCornerRadius = 15.0
 - (void)updateCircleColor:(UIColor *)color
 {
     [self.radialWaveView updateCircleColor:color];
-}
-
-- (void)updateProgressCircleColor:(UIColor *)color
-{
-    [self.radialWaveView updateProgressCircleColor:color];
 }
 
 
