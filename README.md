@@ -4,8 +4,10 @@ BFRadialWaveHUD
 
 > A progress HUD using BFRadialWaveView.
 > Huge thanks to github user [@kevin-hirsch](https://github.com/kevin-hirsch) for making his amazing [KVNProgress](https://github.com/kevin-hirsch/KVNProgress) HUD available under the MIT license! Most of the actual HUD code, as well as ALL of the image processing code is from that project. Thanks again! 
+<br />
 
-![Animated Screenshot](http://i.imgur.com/HfkEER8.webm)
+>_Click the screenshot below for an animated gifv!_<br />
+[![Animated Screenshot](https://raw.githubusercontent.com/bfeher/BFRadialWaveHUD/master/BFRadialWaveHUDDemoFrame1.png)](http://i.imgur.com/HfkEER8.gifv)
 
 
 About
