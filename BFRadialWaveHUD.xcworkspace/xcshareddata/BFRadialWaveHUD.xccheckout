@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>3B0944B1-7BC1-41E2-AC9C-9EE0FF4E15CB</string>
+	<key>IDESourceControlProjectName</key>
+	<string>BFRadialWaveHUD</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E151B576138018C28A1A94E3431F202D8B1DE97F</key>
+		<string>github.com:bfeher/BFRadialWaveHUD.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>BFRadialWaveHUD.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E151B576138018C28A1A94E3431F202D8B1DE97F</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:bfeher/BFRadialWaveHUD.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E151B576138018C28A1A94E3431F202D8B1DE97F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E151B576138018C28A1A94E3431F202D8B1DE97F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>BFRadialWaveHUD</string>
+		</dict>
+	</array>
+</dict>
+</plist>
