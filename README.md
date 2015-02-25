@@ -300,7 +300,7 @@ Properties
 Usage
 ---------
 >Be sure the check out the included demo app to see examples on how to use BFRadialWaveHUD.
-Add the contents of the two directories, `Classes` and `Resources` to your project either manually or via cocoapods.
+Add the contents of the three directories, `Categories`, `Classes`, and `Resources` to your project either manually or via cocoapods.
 
 
 ### Working Example
