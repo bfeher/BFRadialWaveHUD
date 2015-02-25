@@ -24,7 +24,7 @@ Please refer to this [CHANGELOG.md](https://github.com/bfeher/BFRadialWaveHUD/bl
 
 To do:
 ---------
-+ Restart animations on app wake-up. (Note, this is something to fix for [BFRadialWaveView](https://github.com/bfeher/BFRadialWaveView))
++ ~~Restart animations on app wake-up. (Note, this is something to fix for [BFRadialWaveView](https://github.com/bfeher/BFRadialWaveView))~~
 + ~~Move resources into a resource directory, reflecting this change in the cocoapod. (Fix file structure)~~
 
 
@@ -348,7 +348,7 @@ Learn more at http://cocoapods.org
 Add this to your podfile to add BFRadialWaveHUD to your project.
 ```ruby
 platform :ios, '7.1'
-pod 'BFRadialWaveHUD', '~> 1.2.10'
+pod 'BFRadialWaveHUD', '~> 1.3.6'
 ```
 
 

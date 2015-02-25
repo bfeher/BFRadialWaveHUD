@@ -3,13 +3,27 @@ BFRadialWaveView
 [![CocoaPods](https://img.shields.io/cocoapods/v/BFRadialWaveView.svg?style=flat)](https://github.com/bfeher/BFRadialWaveView)
 
 > A mesmerizing view with lots of options. It is meant to be used with [BFRadialWaveHUD](https://github.com/bfeher/BFRadialWaveHUD), but you are free to take it :) 
+<br />
 
-![Animated Screenshot](https://raw.githubusercontent.com/bfeher/BFRadialWaveView/master/BFRadialWaveViewDemo.gif "Animated Screenshot")
+>_Click the screenshot below for an animated gifv!_<br />
+[![Animated Screenshot](https://raw.githubusercontent.com/bfeher/BFRadialWaveView/master/BFRadialWaveViewDemoFrame1.png)](http://i.imgur.com/blnYaNw.gifv)
 
 
 About
 ---------
 _BFRadialWaveView_ is a sublcass of UIView. It displays a radial wave with various options. It was made to be the progress/spinner view for [BFRadialWaveHUD](https://github.com/bfeher/BFRadialWaveHUD).
+
+
+Changes
+---------
+Please refer to this [CHANGELOG.md](https://github.com/bfeher/BFRadialWaveView/blob/master/CHANGELOG.md).
+
+
+To do:
+---------
++ ~~Restart animations on app wake-up.~~
++ ~~Move resources into a resource directory, reflecting this change in the cocoapod. (Fix file structure)~~
+
 
 Modes
 ---------
@@ -119,15 +133,6 @@ Methods
 - (void)updateCircleColor:(UIColor *)color;
 ```
 
-```objective-c
-/**
- *  Update the progress circle color on the fly.
- *
- *  @param color UIColor to set the progress circle's strokeColor to.
- */
-- (void)updateProgressCircleColor:(UIColor *)color;
-```
-
 ### Fun
 ```objective-c
 /**
@@ -206,7 +211,7 @@ Learn more at http://cocoapods.org
 Add this to your podfile to add BFRadialWaveView to your project.
 ```ruby
 platform :ios, '7.1'
-pod 'BFRadialWaveView', '~> 1.2.1'
+pod 'BFRadialWaveView', '~> 1.3.8'
 ```
 
 
@@ -214,4 +219,4 @@ License
 --------
 _BFRadialWaveView_ uses the MIT License:
 
-> Please see included [LICENSE file](https://raw.githubusercontent.com/bfeher/BFRadialWaveView/master/LICENSE).
+> Please see included [LICENSE file](https://raw.githubusercontent.com/bfeher/BFRadialWaveView/master/LICENSE.md).

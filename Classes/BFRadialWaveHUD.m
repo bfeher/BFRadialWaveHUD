@@ -91,9 +91,6 @@ static CGFloat const BFRadialWaveHUD_ContentViewWithoutStatusCornerRadius = 15.0
     NSArray *nibViews = [nib instantiateWithOwner:self
                                           options:0];
     self = nibViews[0];
-    NSLog(@"initin bosss");
-
-//    self = [super init];
     if (self) {
         [self setUpWithContainer:containerView
                       fullScreen:fullscreen
@@ -110,7 +107,6 @@ static CGFloat const BFRadialWaveHUD_ContentViewWithoutStatusCornerRadius = 15.0
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
     if (self = [super initWithCoder:aDecoder]) {
-        NSLog(@"initWithCoder!");
         [self registerForNotifications];
     }
     
@@ -119,37 +115,21 @@ static CGFloat const BFRadialWaveHUD_ContentViewWithoutStatusCornerRadius = 15.0
 
 - (void)dealloc
 {
-    NSLog(@"Dealloc!");
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 
 #pragma mark - Notifications
-- (void)registerForNotifications {
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(applicationDidBecomeActive)
-                                                 name:UIApplicationDidBecomeActiveNotification
-                                               object:nil];
-    
+- (void)registerForNotifications
+{
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(orientationDidChange:)
                                                  name:UIDeviceOrientationDidChangeNotification
                                                object:nil];
 }
 
-- (void)applicationDidBecomeActive
-{
-    NSLog(@"app did become active");
-    /*if (self.state == KVNProgressStateShowed
-        && self.progress == KVNProgressIndeterminate) {
-        // Re-starts the infinite animation
-        [self animateCircleWithInfiniteLoop];
-    }*/
-}
-
 - (void)orientationDidChange:(NSNotification *)notification
 {
-    NSLog(@"orientation changed!");
     if (!self.isShowing) { return; }
     
     if ([self.superview isKindOfClass:[UIWindow class]]) {
@@ -874,22 +854,11 @@ static void dispatch_main_after(NSTimeInterval delay, void (^block)(void))
 #pragma mark - BFRadialWaveView Delegate
 - (void)successfulCompletionWithRadialWaveView:(BFRadialWaveView *)sender
 {
-    NSLog(@"success completion delegate");
-//    [self disappearWithCompletion:self.completionBlock];
     self.completionBlock(YES);
 }
 
 - (void)errorCompletionWithRadialWaveView:(BFRadialWaveView *)sender
 {
-    NSLog(@"error completion delegate");
-//    [self disappearWithCompletion:self.completionBlock];
     self.completionBlock(YES);
 }
-
-/*- (void)dismissedRadialWaveView:(BFRadialWaveView *)sender
-{
-    NSLog(@"dismiss completion delegate");
-    [self disappearWithCompletion:self.completionBlock];
-}*/
-
 @end

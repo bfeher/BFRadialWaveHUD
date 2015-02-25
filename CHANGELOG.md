@@ -2,7 +2,15 @@ BFRadialWaveHUD
 ====================
 [![CocoaPods](https://img.shields.io/cocoapods/v/BFRadialWaveHUD.svg?style=flat)](https://github.com/bfeher/BFRadialWaveHUD)
 
-> Note that this changelog was started very late, at version 1.2.4 Previous changes are lost to the All Father, forever to be unknown.
+> Note that this changelog was started very late, at version 1.2.4. Non consecutive jumps in changelog mean that there were incremental builds that weren't released as a pod, typically while solving a problem.
+
+
+
+1.3.6
+---------
++ ^ Moved all UIImage Categories into a 'Categories' directory, and updated the podspec to reflect this.
++ + Added UIImage Category files to source control.
++ ^ Updatd podspec to include the latest build of [BFRadialWaveView](https://github.com/bfeher/BFRadialWaveView) (1.3.8).
 
 
 1.2.10
