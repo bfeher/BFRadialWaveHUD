@@ -224,6 +224,15 @@ Methods
 - (void)updateProgress:(CGFloat)progress;
 ```
 
+### Pause and Resume  
+```objective-c
+/** Pause the animation. */
+- (void)pause;
+
+/** Resume the animation. */
+- (void)resume;
+```
+
 ### Fun
 ```objective-c
 /**
@@ -348,7 +357,7 @@ Learn more at http://cocoapods.org
 Add this to your podfile to add BFRadialWaveHUD to your project.
 ```ruby
 platform :ios, '7.1'
-pod 'BFRadialWaveHUD', '~> 1.3.6'
+pod 'BFRadialWaveHUD', '~> 1.4.2'
 ```
 
 

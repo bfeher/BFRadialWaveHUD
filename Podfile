@@ -1,3 +1,3 @@
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '7.1'
-pod 'BFRadialWaveView', '~> 1.3.8'
+pod 'BFRadialWaveView', '>= 1.4.4'

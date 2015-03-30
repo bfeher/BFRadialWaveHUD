@@ -670,6 +670,18 @@ static CGFloat const BFRadialWaveHUD_ContentViewWithoutStatusCornerRadius = 15.0
 }
 
 
+#pragma mark Pause and Resume
+- (void)pause
+{
+    [self.radialWaveView pauseAnimation];
+}
+
+- (void)resume
+{
+    [self.radialWaveView resumeAnimation];
+}
+
+
 #pragma mark Fun
 - (void)disco:(BOOL)on
 {

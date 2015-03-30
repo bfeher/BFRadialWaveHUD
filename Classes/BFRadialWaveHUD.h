@@ -197,6 +197,18 @@ extern CGFloat const BFRadialWaveHUD_CircleProgressViewToStatusLabelVerticalSpac
 - (void)updateCircleColor:(UIColor *)color;
 
 
+#pragma mark - Pause and Resume
+/** 
+ * Pause the animation. 
+ */
+- (void)pause;
+
+/** 
+ * Resume the animation. 
+ */
+- (void)resume;
+
+
 #pragma mark - Fun
 /**
  *  Activate of Deactivate disco mode! This will rapidly cycle colors through your BFRadialWaveView. Without setting the colors explicitly, a rainbow is used.
