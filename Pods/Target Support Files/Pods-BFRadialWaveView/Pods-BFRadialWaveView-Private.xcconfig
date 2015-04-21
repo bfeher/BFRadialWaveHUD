@@ -1,5 +1,6 @@
 #include "Pods-BFRadialWaveView.xcconfig"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Build" "${PODS_ROOT}/Headers/Build/BFRadialWaveView" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/BFRadialWaveView" "${PODS_ROOT}/Headers/Public/UIColor+BFPaperColors"
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/BFRadialWaveView" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/BFRadialWaveView" "${PODS_ROOT}/Headers/Public/UIColor+BFPaperColors"
 OTHER_LDFLAGS = -ObjC
 PODS_ROOT = ${SRCROOT}
+SKIP_INSTALL = YES

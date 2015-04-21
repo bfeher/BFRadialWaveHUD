@@ -134,7 +134,7 @@ Methods
 ```
 
 ### Pause and Resume  
-Pause and Resume features graciously added by GitHub user @fco-edno :)
+Pause and Resume features graciously added by GitHub user [@fco-edno](https://github.com/fco-edno) :)
 ```objective-c
 /** Pause the animation. */
 - (void)pauseAnimation;
@@ -228,7 +228,7 @@ Learn more at http://cocoapods.org
 Add this to your podfile to add BFRadialWaveView to your project.
 ```ruby
 platform :ios, '7.1'
-pod 'BFRadialWaveView', '~> 1.4.4'
+pod 'BFRadialWaveView', '~> 1.4.5'
 ```
 
 
