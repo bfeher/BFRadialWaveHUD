@@ -7,7 +7,7 @@ BFRadialWaveHUD
 
 1.5.1
 ---------
-+ + Added public property 'void (^tapToDismissCompletionBlock)(BOOL finished)' to allow for completion blocks after dismissal via tap.
++ + Added public property `void (^tapToDismissCompletionBlock)(BOOL finished)` to allow for completion blocks after dismissal via tap.
 
 
 1.4.3
