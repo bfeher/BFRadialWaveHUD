@@ -294,23 +294,24 @@ static CGFloat const BFRadialWaveHUD_ContentViewWithoutStatusCornerRadius = 15.0
     // Defaults for visual properties:                                                                                      //
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // Private:
-    self.animationDuration = 1.f;
-    self.messageAnimationDuration = 0.5f;
-    self.message = nil;
-    self.atTheDisco = NO;
+    self.animationDuration           = 1.f;
+    self.messageAnimationDuration    = 0.5f;
+    self.message                     = nil;
+    self.atTheDisco                  = NO;
     // Public:
-    self.messageFont = [UIFont fontWithName:@"HelveticaNeue-Light" size:14.f];
-    self.messageColor = self.circleColor;
-    self.HUDColor = [UIColor colorWithWhite:0.13f alpha:0.85f];
-    self.backgroundFadeColor = [UIColor colorWithWhite:1.f alpha:0.6f];
-    self.progressCircleColor = self.circleColor;
-    self.checkmarkColor = self.circleColor;
-    self.crossColor = self.circleColor;
-    self.tapToDismiss = NO;
-    _isShowing = NO;
-    self.discoColors = nil;
-    self.discoSpeed = 0.33f;
-    self.alpha = 0;
+    self.messageFont                 = [UIFont fontWithName:@"HelveticaNeue-Light" size:14.f];
+    self.messageColor                = self.circleColor;
+    self.HUDColor                    = [UIColor colorWithWhite:0.13f alpha:0.85f];
+    self.backgroundFadeColor         = [UIColor colorWithWhite:1.f alpha:0.6f];
+    self.progressCircleColor         = self.circleColor;
+    self.checkmarkColor              = self.circleColor;
+    self.crossColor                  = self.circleColor;
+    self.tapToDismiss                = NO;
+    self.tapToDismissCompletionBlock = nil;
+    _isShowing                       = NO;
+    self.discoColors                 = nil;
+    self.discoSpeed                  = 0.33f;
+    self.alpha                       = 0;
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     
     self.backgroundColor = fullscreen ? [UIColor clearColor] : self.backgroundFadeColor;
@@ -425,7 +426,7 @@ static CGFloat const BFRadialWaveHUD_ContentViewWithoutStatusCornerRadius = 15.0
     
     if (self.tapToDismiss) {
         UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self
-                                                                                               action:@selector(dismiss)];
+                                                                                               action:@selector(dismissByTap)];
         [self addGestureRecognizer:tapGestureRecognizer];
     }
 }
@@ -518,6 +519,11 @@ static CGFloat const BFRadialWaveHUD_ContentViewWithoutStatusCornerRadius = 15.0
 - (void)dismiss
 {
     [self dismissAfterDelay:0.f withCompletion:nil];
+}
+
+- (void)dismissByTap
+{
+    [self dismissAfterDelay:0.f withCompletion:self.tapToDismissCompletionBlock];
 }
 
 - (void)dismissWithCompletion:(void (^)(BOOL finished))completionBlock

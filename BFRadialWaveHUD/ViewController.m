@@ -64,6 +64,12 @@
                                                      strokeWidth:self.circleStrokeWidth];
     [hud setBlurBackground:self.blurSwitch.isOn];
     hud.tapToDismiss = YES;
+    hud.tapToDismissCompletionBlock = ^void(BOOL finished) {
+        NSLog(@"running tapToDismissCompletionBlock...");
+        if (finished) {
+            NSLog(@"...finished running tapToDismissCompletionBlock.");
+        }
+    };
     [hud show];
     [hud disco:self.discoSwitch.isOn];
 }
@@ -78,6 +84,12 @@
                                                      strokeWidth:self.circleStrokeWidth];
     [hud setBlurBackground:self.blurSwitch.isOn];
     hud.tapToDismiss = YES;
+    hud.tapToDismissCompletionBlock = ^void(BOOL finished) {
+        NSLog(@"running tapToDismissCompletionBlock...");
+        if (finished) {
+            NSLog(@"...finished running tapToDismissCompletionBlock.");
+        }
+    };
     [hud showWithMessage:@"Loading..."];
     [hud disco:self.discoSwitch.isOn];
 }
@@ -160,7 +172,6 @@
     hud.HUDColor = [UIColor colorWithWhite:1.f alpha:0.85f];
     hud.backgroundFadeColor = [UIColor colorWithWhite:0.13f alpha:0.6f];
     [hud setBlurBackground:self.blurSwitch.isOn];
-    hud.tapToDismiss = YES;
     [hud showProgress:0.f withMessage:@"Try me in other modes too!\n(and check out my custom disco)"];
     hud.progressCircleColor = [UIColor paperColorLightGreen100];
     [self updateProgressForCustomHUD:hud];

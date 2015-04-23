@@ -247,6 +247,9 @@ extern CGFloat const BFRadialWaveHUD_CircleProgressViewToStatusLabelVerticalSpac
 /** BOOL flag to set whether to dismiss on tap (YES) or ignore taps (NO). */
 @property (nonatomic) BOOL tapToDismiss;
 
+/** Block to run after dismissal via tap. */
+@property (nonatomic, copy) void (^tapToDismissCompletionBlock)(BOOL finished);
+
 /** A READONLY BOOL flag for your convenience. Returns YES when the HUD is showing, and NO when it is not. */
 @property (readonly) BOOL isShowing;
 

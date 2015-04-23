@@ -287,6 +287,10 @@ Properties
 @property (nonatomic) BOOL tapToDismiss;
 ```
 ```objective-c
+/** Block to run after dismissal via tap. */
+@property (nonatomic, copy) void (^tapToDismissCompletionBlock)(BOOL finished);
+```
+```objective-c
 /** A READONLY BOOL flag for your convenience. Returns YES when the HUD is showing, and NO when it is not. */
 @property (readonly) BOOL isShowing;
 ```
@@ -357,7 +361,7 @@ Learn more at http://cocoapods.org
 Add this to your podfile to add BFRadialWaveHUD to your project.
 ```ruby
 platform :ios, '7.1'
-pod 'BFRadialWaveHUD', '~> 1.4.3'
+pod 'BFRadialWaveHUD', '~> 1.5.1'
 ```
 
 

@@ -5,6 +5,11 @@ BFRadialWaveHUD
 > Note that this changelog was started very late, at version 1.2.4. Non consecutive jumps in changelog mean that there were incremental builds that weren't released as a pod, typically while solving a problem.
 
 
+1.5.1
+---------
++ + Added public property 'void (^tapToDismissCompletionBlock)(BOOL finished)' to allow for completion blocks after dismissal via tap.
+
+
 1.4.3
 ---------
 + ^ Updated pods.
