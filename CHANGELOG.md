@@ -5,6 +5,13 @@ BFRadialWaveHUD
 > Note that this changelog was started very late, at version 1.2.4. Non consecutive jumps in changelog mean that there were incremental builds that weren't released as a pod, typically while solving a problem.
 
 
+
+1.5.2
+---------
++ ^ Fixed bug in `updateProgress:(CGFloat)progress` which was causing the HUD to reappear when new progress was sent, even after dismissal. This would happen if you didn't cancel the process which was adding progress to the HUD (for instance, downloading a file over the webz).
++ ^ Fixed bug where `self.radialWaveView` was being setup multiple times, causing it to have more circles than intended and its previous progress amount to carry over to new HUDs. 
+
+
 1.5.1
 ---------
 + + Added public property `void (^tapToDismissCompletionBlock)(BOOL finished)` to allow for completion blocks after dismissal via tap.

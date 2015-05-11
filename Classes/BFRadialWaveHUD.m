@@ -315,13 +315,14 @@ static CGFloat const BFRadialWaveHUD_ContentViewWithoutStatusCornerRadius = 15.0
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     
     self.backgroundColor = fullscreen ? [UIColor clearColor] : self.backgroundFadeColor;
+    
+    [self setupRadialWaveView];
 }
 
 - (void)setupUI
 {
     [self setupGestures];
     [self setupConstraints];
-    [self setupRadialWaveView];
     [self setupMessage:self.message];
     [self setupBackground];
 }
@@ -593,9 +594,10 @@ static CGFloat const BFRadialWaveHUD_ContentViewWithoutStatusCornerRadius = 15.0
 
 - (void)updateProgress:(CGFloat)progress
 {
-    [self appear];
-    [self.radialWaveView updateProgress:progress];
-    [self updateRadialWaveViewConstraints];
+    if (progress > self.progress) {
+        [self.radialWaveView updateProgress:progress];
+        [self updateRadialWaveViewConstraints];
+    }
 }
 
 - (void)updateUIForOrientation
