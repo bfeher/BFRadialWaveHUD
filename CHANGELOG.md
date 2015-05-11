@@ -10,6 +10,7 @@ BFRadialWaveHUD
 ---------
 + ^ Fixed bug in `updateProgress:(CGFloat)progress` which was causing the HUD to reappear when new progress was sent, even after dismissal. This would happen if you didn't cancel the process which was adding progress to the HUD (for instance, downloading a file over the webz).
 + ^ Fixed bug where `self.radialWaveView` was being setup multiple times, causing it to have more circles than intended and its previous progress amount to carry over to new HUDs. 
++ ^ Fixed bug where the progress circle would sometimes be choppy. It now only climbs forward.
 
 
 1.5.1
