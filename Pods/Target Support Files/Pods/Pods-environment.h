@@ -10,7 +10,7 @@
 #define COCOAPODS_POD_AVAILABLE_BFRadialWaveView
 #define COCOAPODS_VERSION_MAJOR_BFRadialWaveView 1
 #define COCOAPODS_VERSION_MINOR_BFRadialWaveView 4
-#define COCOAPODS_VERSION_PATCH_BFRadialWaveView 5
+#define COCOAPODS_VERSION_PATCH_BFRadialWaveView 6
 
 // UIColor+BFPaperColors
 #define COCOAPODS_POD_AVAILABLE_UIColor_BFPaperColors

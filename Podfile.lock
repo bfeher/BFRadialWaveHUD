@@ -1,5 +1,5 @@
 PODS:
-  - BFRadialWaveView (HEAD based on 1.4.5):
+  - BFRadialWaveView (HEAD based on 1.4.6):
     - UIColor+BFPaperColors
   - UIColor+BFPaperColors (1.5.1)
 
@@ -7,7 +7,7 @@ DEPENDENCIES:
   - BFRadialWaveView (HEAD)
 
 SPEC CHECKSUMS:
-  BFRadialWaveView: 8247c05a4b6104184322eb2cefb922876881792b
+  BFRadialWaveView: dcf3f2b07b3993e6e748fd3489e490d94c1052a8
   UIColor+BFPaperColors: 4b2baddaef5bee61159068b5cca5b765e5e58a08
 
-COCOAPODS: 0.36.3
+COCOAPODS: 0.37.2

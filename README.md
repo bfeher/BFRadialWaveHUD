@@ -10,6 +10,16 @@ BFRadialWaveHUD
 [![Animated Screenshot](https://raw.githubusercontent.com/bfeher/BFRadialWaveHUD/master/BFRadialWaveHUDDemoFrame1.png)](http://i.imgur.com/0A3E1aQ.gifv)
 
 
+NOTE!!
+---------
+If you suspect/realize that your pod of [BFRadialWaveView](https://github.com/bfeher/BFRadialWaveView) isn't up to date, just run the command:
+```
+$ pod install
+```
+The podfile always points to `:HEAD` so running the above command will ensure you have the latest version of [BFRadialWaveView](https://github.com/bfeher/BFRadialWaveView).
+
+
+
 About
 ---------
 _BFRadialWaveHUD_ is a fully customizable progress HUD that supports fullscreen, background blurring, dynaically changing message text, and disco time.
@@ -361,7 +371,7 @@ Learn more at http://cocoapods.org
 Add this to your podfile to add BFRadialWaveHUD to your project.
 ```ruby
 platform :ios, '7.1'
-pod 'BFRadialWaveHUD', '~> 1.5.2'
+pod 'BFRadialWaveHUD', '~> 1.5.3'
 ```
 
 

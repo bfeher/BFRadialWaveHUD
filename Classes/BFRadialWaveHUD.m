@@ -874,11 +874,15 @@ static void dispatch_main_after(NSTimeInterval delay, void (^block)(void))
 #pragma mark - BFRadialWaveView Delegate
 - (void)successfulCompletionWithRadialWaveView:(BFRadialWaveView *)sender
 {
-    self.completionBlock(YES);
+    if (nil != self.completionBlock) {
+        self.completionBlock(YES);
+    }
 }
 
 - (void)errorCompletionWithRadialWaveView:(BFRadialWaveView *)sender
 {
-    self.completionBlock(YES);
+    if (nil != self.completionBlock) {
+        self.completionBlock(YES);
+    }
 }
 @end

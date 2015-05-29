@@ -6,6 +6,11 @@ BFRadialWaveHUD
 
 
 
+1.5.3
+---------
++ ^ Fixed bug in where completion blocks were being told to run even when they were nil, causing a crash. [Issue 6](https://github.com/bfeher/BFRadialWaveHUD/issues/6).
+
+
 1.5.2
 ---------
 + ^ Fixed bug in `updateProgress:(CGFloat)progress` which was causing the HUD to reappear when new progress was sent, even after dismissal. This would happen if you didn't cancel the process which was adding progress to the HUD (for instance, downloading a file over the webz).
