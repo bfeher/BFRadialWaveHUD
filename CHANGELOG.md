@@ -5,6 +5,11 @@ BFRadialWaveHUD
 > Note that this changelog was started very late, at version 1.2.4. Non consecutive jumps in changelog mean that there were incremental builds that weren't released as a pod, typically while solving a problem.
 
 
+1.5.4
+---------
++ ^ Podspec and Podfile now optimistically (~>) list a version for BFRadialWaveView.
++ ^ Updated project to new Xcode recommended settings.
+
 
 1.5.3
 ---------

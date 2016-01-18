@@ -7,388 +7,403 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		021228D9A3379B48BA655ECF /* BFRadialWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C36BE5A34DEDBCF0739ADD /* BFRadialWaveView.m */; };
-		27C659BB98A6DF89E9757575 /* Pods-UIColor+BFPaperColors-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9477D0C8AD0AD19A25801AB1 /* Pods-UIColor+BFPaperColors-dummy.m */; };
-		29977271545C0502FF34F5B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAD4E2D1A7CD5A9E258664F9 /* Foundation.framework */; };
-		37A1A07D9D5B1EB2DA00680C /* BFRadialWaveView.h in Headers */ = {isa = PBXBuildFile; fileRef = E109F15D504F90C2B5F3FC9B /* BFRadialWaveView.h */; };
-		427E7A0BB397899BFB867077 /* BFGradientCALayer.h in Headers */ = {isa = PBXBuildFile; fileRef = A89ABFE87CCA21CB58B9D4EE /* BFGradientCALayer.h */; };
-		63D39DCCA0175E231CDCE3BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAD4E2D1A7CD5A9E258664F9 /* Foundation.framework */; };
-		85CDF1335CC37AAD9C4CA543 /* BFGradientCALayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F0FF72BCEAFD9B06601EAE1 /* BFGradientCALayer.m */; };
-		B71B888DAA5F671A9B26E63E /* Pods-BFRadialWaveView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B58C9B642AEF240D4C05074 /* Pods-BFRadialWaveView-dummy.m */; };
-		BB5360A2EA7D509913DE9987 /* UIColor+BFPaperColors.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F489BD39AA4073EF473AAB5 /* UIColor+BFPaperColors.h */; };
-		C9F4E9D39A7F7E3A6D65872F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAD4E2D1A7CD5A9E258664F9 /* Foundation.framework */; };
-		E8F26B774B114564A5456695 /* UIColor+BFPaperColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F62A55DBB7B9651D4CD43B0 /* UIColor+BFPaperColors.m */; };
-		F0F8F3DD6B99E48D5AD5E8C0 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3083AF68D780AE5D19C4CC3E /* Pods-dummy.m */; };
+		04C386CF8776673D451A5D498C4E034B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		07CAA154C2F3D58D6238FB6EFCF9B499 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		0E0D3AD5BDED2F55DBC98C7A05DF6F81 /* BFRadialWaveView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 569F73065C410795D885405669AC4693 /* BFRadialWaveView-dummy.m */; };
+		31D30A9306EF48D3045030DF436DDBEC /* UIColor+BFPaperColors-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BEDC77B8B42C68760BA3106263DA5DE1 /* UIColor+BFPaperColors-dummy.m */; };
+		3F42C652C6ACBEBE7456BA54CB868B4C /* BFGradientCALayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D303300161A5B7F67F779C798E88E67 /* BFGradientCALayer.m */; };
+		9E5AF54E5DDE84B47466D3C9B153F68A /* BFRadialWaveView.h in Headers */ = {isa = PBXBuildFile; fileRef = A11F0AE1CD255994378AEE6001814CA6 /* BFRadialWaveView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B8FA9B3C0C4603DCC4EAF23CD78139A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		BDC5322A9197C0E6726A9EA24B664C06 /* BFRadialWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBACA86F7CF793ABB3080BAA07A8FB52 /* BFRadialWaveView.m */; };
+		BE0D33EEFAA899706AD82D0938AC9B64 /* UIColor+BFPaperColors.h in Headers */ = {isa = PBXBuildFile; fileRef = C3335DBEC1080A39383E9738E4EFF7CE /* UIColor+BFPaperColors.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C7280A9D1ACB2C0F892220B8F9467333 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 272643F56613CA0D336AE3DBF19DC404 /* Pods-dummy.m */; };
+		DBAE5F15231AFFE6FE2468A297B54E66 /* UIColor+BFPaperColors.m in Sources */ = {isa = PBXBuildFile; fileRef = D405E9916DC1298945029A4FA8F365BE /* UIColor+BFPaperColors.m */; };
+		ED01B76DE095C0739F22FC380C8BF3D1 /* BFGradientCALayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C8F112B092E4B7A6E1DD05215227D4C /* BFGradientCALayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		377D80F21CEF712BC096D6FE /* PBXContainerItemProxy */ = {
+		165D85D9AFEB030916788C40BA7182CE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 1DD15E1FAD1CF88AB00ED3CF /* Project object */;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = BF6FAF5A57B932636D6B8B36;
-			remoteInfo = "Pods-UIColor+BFPaperColors";
+			remoteGlobalIDString = FED71E83B0707CFE6FD9311180A43060;
+			remoteInfo = "UIColor+BFPaperColors";
 		};
-		3B1E5EE10895DDD23CCE31BD /* PBXContainerItemProxy */ = {
+		260478490B8E2D54A63CC19C647B9628 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 1DD15E1FAD1CF88AB00ED3CF /* Project object */;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = BF6FAF5A57B932636D6B8B36;
-			remoteInfo = "Pods-UIColor+BFPaperColors";
+			remoteGlobalIDString = FE9BA5741AC386880AD1D6AAEE76E89F;
+			remoteInfo = BFRadialWaveView;
 		};
-		BE274859236BB6C5EB507CB4 /* PBXContainerItemProxy */ = {
+		38EA5AC2E0871A23F831D32441FE0CF8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 1DD15E1FAD1CF88AB00ED3CF /* Project object */;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 083345C3465D6ADB3E598F60;
-			remoteInfo = "Pods-BFRadialWaveView";
+			remoteGlobalIDString = FED71E83B0707CFE6FD9311180A43060;
+			remoteInfo = "UIColor+BFPaperColors";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0F7F1DCA1D658147A0CC6ABC /* Pods-UIColor+BFPaperColors.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UIColor+BFPaperColors.xcconfig"; sourceTree = "<group>"; };
-		173DD4D2A8D069454DB00344 /* Pods-BFRadialWaveView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BFRadialWaveView-prefix.pch"; sourceTree = "<group>"; };
-		1C1C610303E7451293F272B6 /* Pods-BFRadialWaveView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BFRadialWaveView.xcconfig"; sourceTree = "<group>"; };
-		1F0FF72BCEAFD9B06601EAE1 /* BFGradientCALayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFGradientCALayer.m; path = Classes/BFGradientCALayer.m; sourceTree = "<group>"; };
-		229A4613FF039E0AE4742EEB /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
-		2710727ADAF0E2D5925B5FD1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
-		3083AF68D780AE5D19C4CC3E /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
-		39430F8101DC20F5E2576834 /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
-		5F99CBD285BB664EF65D0886 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
-		654E85C7542ACDEB96BA26A1 /* libPods-UIColor+BFPaperColors.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UIColor+BFPaperColors.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6B58C9B642AEF240D4C05074 /* Pods-BFRadialWaveView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BFRadialWaveView-dummy.m"; sourceTree = "<group>"; };
-		6F489BD39AA4073EF473AAB5 /* UIColor+BFPaperColors.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+BFPaperColors.h"; path = "UIColor+BFPaperColors/UIColor+BFPaperColors.h"; sourceTree = "<group>"; };
-		843196B8EB2F43ED710A0DA9 /* Pods-BFRadialWaveView-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BFRadialWaveView-Private.xcconfig"; sourceTree = "<group>"; };
-		8F62A55DBB7B9651D4CD43B0 /* UIColor+BFPaperColors.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+BFPaperColors.m"; path = "UIColor+BFPaperColors/UIColor+BFPaperColors.m"; sourceTree = "<group>"; };
-		93CDA66A8E1FE2492F7CA434 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9477D0C8AD0AD19A25801AB1 /* Pods-UIColor+BFPaperColors-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UIColor+BFPaperColors-dummy.m"; sourceTree = "<group>"; };
-		A89ABFE87CCA21CB58B9D4EE /* BFGradientCALayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFGradientCALayer.h; path = Classes/BFGradientCALayer.h; sourceTree = "<group>"; };
-		B1C36BE5A34DEDBCF0739ADD /* BFRadialWaveView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFRadialWaveView.m; path = Classes/BFRadialWaveView.m; sourceTree = "<group>"; };
-		CBDDD41EF92538C67C0C4682 /* Pods-UIColor+BFPaperColors-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-UIColor+BFPaperColors-prefix.pch"; sourceTree = "<group>"; };
-		CD67BCA969060ED702DDD23B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
-		DAD4E2D1A7CD5A9E258664F9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		E109F15D504F90C2B5F3FC9B /* BFRadialWaveView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFRadialWaveView.h; path = Classes/BFRadialWaveView.h; sourceTree = "<group>"; };
-		E14F87521C525F2F2BFECBC2 /* libPods-BFRadialWaveView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BFRadialWaveView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E8DE4D10AA7A691890F5677A /* Pods-UIColor+BFPaperColors-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UIColor+BFPaperColors-Private.xcconfig"; sourceTree = "<group>"; };
-		E97117C8CE719ACDE61235FA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB38C58EB47CACE303A9E29E /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		10834806BD7B412BC24F347361FA2C8E /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		272643F56613CA0D336AE3DBF19DC404 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		2D9112C6F277A713DE80A17090532954 /* BFRadialWaveView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BFRadialWaveView-prefix.pch"; sourceTree = "<group>"; };
+		37DB56D75062CC75FCB0966E1C6E8A8E /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		4E02E685FCAE220CC2A2FEE5E36FB21A /* UIColor+BFPaperColors-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIColor+BFPaperColors-prefix.pch"; sourceTree = "<group>"; };
+		4E762F23EC34ED4A6FF3312D84E33A40 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		569F73065C410795D885405669AC4693 /* BFRadialWaveView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BFRadialWaveView-dummy.m"; sourceTree = "<group>"; };
+		6911BECA35E7518D864239B7E898EEF3 /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
+		8C8F112B092E4B7A6E1DD05215227D4C /* BFGradientCALayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFGradientCALayer.h; path = Classes/BFGradientCALayer.h; sourceTree = "<group>"; };
+		8D303300161A5B7F67F779C798E88E67 /* BFGradientCALayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFGradientCALayer.m; path = Classes/BFGradientCALayer.m; sourceTree = "<group>"; };
+		923D6E6C9574E48A86606EC60EAF75A5 /* UIColor+BFPaperColors.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UIColor+BFPaperColors.xcconfig"; sourceTree = "<group>"; };
+		98C98CDFB3F20F2925F6CD1F141BB14F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		A065091E679ABA86CB4B9EBE8731A979 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A11F0AE1CD255994378AEE6001814CA6 /* BFRadialWaveView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BFRadialWaveView.h; path = Classes/BFRadialWaveView.h; sourceTree = "<group>"; };
+		A1A36D34413696BE466E2CA0AFF194DA /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BEDC77B8B42C68760BA3106263DA5DE1 /* UIColor+BFPaperColors-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIColor+BFPaperColors-dummy.m"; sourceTree = "<group>"; };
+		C22C5153FCC21DAB208B1FF1E2D01980 /* libBFRadialWaveView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBFRadialWaveView.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3335DBEC1080A39383E9738E4EFF7CE /* UIColor+BFPaperColors.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+BFPaperColors.h"; path = "UIColor+BFPaperColors/UIColor+BFPaperColors.h"; sourceTree = "<group>"; };
+		D405E9916DC1298945029A4FA8F365BE /* UIColor+BFPaperColors.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+BFPaperColors.m"; path = "UIColor+BFPaperColors/UIColor+BFPaperColors.m"; sourceTree = "<group>"; };
+		D4926316263CDAA23510B3EB459A8EAE /* BFRadialWaveView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BFRadialWaveView.xcconfig; sourceTree = "<group>"; };
+		D864498FB17D2AC3544B6764E144E527 /* libUIColor+BFPaperColors.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libUIColor+BFPaperColors.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBACA86F7CF793ABB3080BAA07A8FB52 /* BFRadialWaveView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BFRadialWaveView.m; path = Classes/BFRadialWaveView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		919F6FFED99FAD095D36B8A6 /* Frameworks */ = {
+		206F5C506E09FC3F6486A42CFE0EEDC9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63D39DCCA0175E231CDCE3BC /* Foundation.framework in Frameworks */,
+				B8FA9B3C0C4603DCC4EAF23CD78139A7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A4A2A260B120130204EE5F56 /* Frameworks */ = {
+		2DB43EAE43073D12E1C7849DFDB62BB9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29977271545C0502FF34F5B7 /* Foundation.framework in Frameworks */,
+				04C386CF8776673D451A5D498C4E034B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FD514161A0FBD073551B0C3E /* Frameworks */ = {
+		34E843D01E57E4C1A7BEB86601012188 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9F4E9D39A7F7E3A6D65872F /* Foundation.framework in Frameworks */,
+				07CAA154C2F3D58D6238FB6EFCF9B499 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3751625CBB57B96C52D67DDB /* Pods */ = {
+		037C0CA694176A3C0915F62C9D20B3E6 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				7D5D249F63B04271F57912A2 /* BFRadialWaveView */,
-				6F48C182822FFAC50E74AF42 /* UIColor+BFPaperColors */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		3DF3EC2B7C9235E94F43FD5D /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				DAD4E2D1A7CD5A9E258664F9 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		403D12DC7D2A0CC33108EED8 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				0F7F1DCA1D658147A0CC6ABC /* Pods-UIColor+BFPaperColors.xcconfig */,
-				E8DE4D10AA7A691890F5677A /* Pods-UIColor+BFPaperColors-Private.xcconfig */,
-				9477D0C8AD0AD19A25801AB1 /* Pods-UIColor+BFPaperColors-dummy.m */,
-				CBDDD41EF92538C67C0C4682 /* Pods-UIColor+BFPaperColors-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-UIColor+BFPaperColors";
-			sourceTree = "<group>";
-		};
-		416AE04BF6347EFEE725BEBC /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				8DEA67A322055EEC0D07260B /* Pods */,
+				B3D1D13E0C6553800746CB8FD61CF946 /* Pods */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		6F48C182822FFAC50E74AF42 /* UIColor+BFPaperColors */ = {
+		093E9321397C1C5A9CD1384AB5318F8C /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				6F489BD39AA4073EF473AAB5 /* UIColor+BFPaperColors.h */,
-				8F62A55DBB7B9651D4CD43B0 /* UIColor+BFPaperColors.m */,
-				403D12DC7D2A0CC33108EED8 /* Support Files */,
+				D4926316263CDAA23510B3EB459A8EAE /* BFRadialWaveView.xcconfig */,
+				569F73065C410795D885405669AC4693 /* BFRadialWaveView-dummy.m */,
+				2D9112C6F277A713DE80A17090532954 /* BFRadialWaveView-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/BFRadialWaveView";
+			sourceTree = "<group>";
+		};
+		0D87EDBD2AA6004CCEFC38721F50DD3E /* UIColor+BFPaperColors */ = {
+			isa = PBXGroup;
+			children = (
+				C3335DBEC1080A39383E9738E4EFF7CE /* UIColor+BFPaperColors.h */,
+				D405E9916DC1298945029A4FA8F365BE /* UIColor+BFPaperColors.m */,
+				882FADB479DDAA1BFCB45F6A459AA2B7 /* Support Files */,
 			);
 			path = "UIColor+BFPaperColors";
 			sourceTree = "<group>";
 		};
-		7D5D249F63B04271F57912A2 /* BFRadialWaveView */ = {
+		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
-				A89ABFE87CCA21CB58B9D4EE /* BFGradientCALayer.h */,
-				1F0FF72BCEAFD9B06601EAE1 /* BFGradientCALayer.m */,
-				E109F15D504F90C2B5F3FC9B /* BFRadialWaveView.h */,
-				B1C36BE5A34DEDBCF0739ADD /* BFRadialWaveView.m */,
-				C095C74DEFB00872F7444DA7 /* Support Files */,
-			);
-			path = BFRadialWaveView;
-			sourceTree = "<group>";
-		};
-		8CEE9413D1A7B60DBCC354DA = {
-			isa = PBXGroup;
-			children = (
-				93CDA66A8E1FE2492F7CA434 /* Podfile */,
-				913C75C3F4881775328C7E93 /* Frameworks */,
-				3751625CBB57B96C52D67DDB /* Pods */,
-				B219BE9B81D37FAA6FDE89C3 /* Products */,
-				416AE04BF6347EFEE725BEBC /* Targets Support Files */,
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				A6D65DB458604E698058567196CFC209 /* Pods */,
+				DEB411D326BE5B9A787B62299A15F54F /* Products */,
+				037C0CA694176A3C0915F62C9D20B3E6 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8DEA67A322055EEC0D07260B /* Pods */ = {
+		882FADB479DDAA1BFCB45F6A459AA2B7 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				5F99CBD285BB664EF65D0886 /* Pods-acknowledgements.markdown */,
-				EB38C58EB47CACE303A9E29E /* Pods-acknowledgements.plist */,
-				3083AF68D780AE5D19C4CC3E /* Pods-dummy.m */,
-				39430F8101DC20F5E2576834 /* Pods-environment.h */,
-				229A4613FF039E0AE4742EEB /* Pods-resources.sh */,
-				2710727ADAF0E2D5925B5FD1 /* Pods.debug.xcconfig */,
-				CD67BCA969060ED702DDD23B /* Pods.release.xcconfig */,
+				923D6E6C9574E48A86606EC60EAF75A5 /* UIColor+BFPaperColors.xcconfig */,
+				BEDC77B8B42C68760BA3106263DA5DE1 /* UIColor+BFPaperColors-dummy.m */,
+				4E02E685FCAE220CC2A2FEE5E36FB21A /* UIColor+BFPaperColors-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/UIColor+BFPaperColors";
+			sourceTree = "<group>";
+		};
+		A6D65DB458604E698058567196CFC209 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B6B0C782A417831D117A6A09E9FD4C0C /* BFRadialWaveView */,
+				0D87EDBD2AA6004CCEFC38721F50DD3E /* UIColor+BFPaperColors */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B3D1D13E0C6553800746CB8FD61CF946 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				37DB56D75062CC75FCB0966E1C6E8A8E /* Pods-acknowledgements.markdown */,
+				10834806BD7B412BC24F347361FA2C8E /* Pods-acknowledgements.plist */,
+				272643F56613CA0D336AE3DBF19DC404 /* Pods-dummy.m */,
+				6911BECA35E7518D864239B7E898EEF3 /* Pods-frameworks.sh */,
+				A1A36D34413696BE466E2CA0AFF194DA /* Pods-resources.sh */,
+				4E762F23EC34ED4A6FF3312D84E33A40 /* Pods.debug.xcconfig */,
+				98C98CDFB3F20F2925F6CD1F141BB14F /* Pods.release.xcconfig */,
 			);
 			name = Pods;
 			path = "Target Support Files/Pods";
 			sourceTree = "<group>";
 		};
-		913C75C3F4881775328C7E93 /* Frameworks */ = {
+		B6B0C782A417831D117A6A09E9FD4C0C /* BFRadialWaveView */ = {
 			isa = PBXGroup;
 			children = (
-				3DF3EC2B7C9235E94F43FD5D /* iOS */,
+				8C8F112B092E4B7A6E1DD05215227D4C /* BFGradientCALayer.h */,
+				8D303300161A5B7F67F779C798E88E67 /* BFGradientCALayer.m */,
+				A11F0AE1CD255994378AEE6001814CA6 /* BFRadialWaveView.h */,
+				FBACA86F7CF793ABB3080BAA07A8FB52 /* BFRadialWaveView.m */,
+				093E9321397C1C5A9CD1384AB5318F8C /* Support Files */,
+			);
+			path = BFRadialWaveView;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B219BE9B81D37FAA6FDE89C3 /* Products */ = {
+		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				E97117C8CE719ACDE61235FA /* libPods.a */,
-				E14F87521C525F2F2BFECBC2 /* libPods-BFRadialWaveView.a */,
-				654E85C7542ACDEB96BA26A1 /* libPods-UIColor+BFPaperColors.a */,
+				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
 			);
-			name = Products;
+			name = iOS;
 			sourceTree = "<group>";
 		};
-		C095C74DEFB00872F7444DA7 /* Support Files */ = {
+		DEB411D326BE5B9A787B62299A15F54F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1C1C610303E7451293F272B6 /* Pods-BFRadialWaveView.xcconfig */,
-				843196B8EB2F43ED710A0DA9 /* Pods-BFRadialWaveView-Private.xcconfig */,
-				6B58C9B642AEF240D4C05074 /* Pods-BFRadialWaveView-dummy.m */,
-				173DD4D2A8D069454DB00344 /* Pods-BFRadialWaveView-prefix.pch */,
+				C22C5153FCC21DAB208B1FF1E2D01980 /* libBFRadialWaveView.a */,
+				A065091E679ABA86CB4B9EBE8731A979 /* libPods.a */,
+				D864498FB17D2AC3544B6764E144E527 /* libUIColor+BFPaperColors.a */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-BFRadialWaveView";
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		1E74DFA966750412B130C496 /* Headers */ = {
+		702C6A203B041DEE64BEBD91BC18FEF5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB5360A2EA7D509913DE9987 /* UIColor+BFPaperColors.h in Headers */,
+				BE0D33EEFAA899706AD82D0938AC9B64 /* UIColor+BFPaperColors.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2E578BFBB1CE9A36CD7F3B7B /* Headers */ = {
+		C8003FB63908811568439669DBF1C8B2 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				427E7A0BB397899BFB867077 /* BFGradientCALayer.h in Headers */,
-				37A1A07D9D5B1EB2DA00680C /* BFRadialWaveView.h in Headers */,
+				ED01B76DE095C0739F22FC380C8BF3D1 /* BFGradientCALayer.h in Headers */,
+				9E5AF54E5DDE84B47466D3C9B153F68A /* BFRadialWaveView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		083345C3465D6ADB3E598F60 /* Pods-BFRadialWaveView */ = {
+		F4928EC63DCF48DA463E0A38954A15C1 /* Pods */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A5CEF8D43B818B751F47AF28 /* Build configuration list for PBXNativeTarget "Pods-BFRadialWaveView" */;
+			buildConfigurationList = 84D63076CA5D85005C77BA0E80B93B46 /* Build configuration list for PBXNativeTarget "Pods" */;
 			buildPhases = (
-				BAD4FF9E4E634BA12689F111 /* Sources */,
-				919F6FFED99FAD095D36B8A6 /* Frameworks */,
-				2E578BFBB1CE9A36CD7F3B7B /* Headers */,
+				E84DE12872E7ED371D24B3BCAF57532A /* Sources */,
+				34E843D01E57E4C1A7BEB86601012188 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				852D14B9B21D19E98BA8D6DE /* PBXTargetDependency */,
-			);
-			name = "Pods-BFRadialWaveView";
-			productName = "Pods-BFRadialWaveView";
-			productReference = E14F87521C525F2F2BFECBC2 /* libPods-BFRadialWaveView.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		5F7AEE96FFC4B68FECE62FDC /* Pods */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A898DC6F98CD4D526FB42295 /* Build configuration list for PBXNativeTarget "Pods" */;
-			buildPhases = (
-				E2EB3CEA7D5069B27E26CAF5 /* Sources */,
-				A4A2A260B120130204EE5F56 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F9C2F117FAFCE5993B131999 /* PBXTargetDependency */,
-				87547B2E1C6B0DB8A6FECF3E /* PBXTargetDependency */,
+				FC18ACEDD26CC5926AE5D06720D101C8 /* PBXTargetDependency */,
+				C558E862CFACFF0D9F004BDEAA0F9195 /* PBXTargetDependency */,
 			);
 			name = Pods;
 			productName = Pods;
-			productReference = E97117C8CE719ACDE61235FA /* libPods.a */;
+			productReference = A065091E679ABA86CB4B9EBE8731A979 /* libPods.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		BF6FAF5A57B932636D6B8B36 /* Pods-UIColor+BFPaperColors */ = {
+		FE9BA5741AC386880AD1D6AAEE76E89F /* BFRadialWaveView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 93DB331387E92BF309FDF971 /* Build configuration list for PBXNativeTarget "Pods-UIColor+BFPaperColors" */;
+			buildConfigurationList = 5E92D2D9C2902C3EB9E00E25BEDD9F2E /* Build configuration list for PBXNativeTarget "BFRadialWaveView" */;
 			buildPhases = (
-				7D00FC8ACCF1CCFBF89D000D /* Sources */,
-				FD514161A0FBD073551B0C3E /* Frameworks */,
-				1E74DFA966750412B130C496 /* Headers */,
+				2A84B47ED25AB06EF177F517ECBB2D45 /* Sources */,
+				206F5C506E09FC3F6486A42CFE0EEDC9 /* Frameworks */,
+				C8003FB63908811568439669DBF1C8B2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE4729090F8F25DE1116F693566C7AE4 /* PBXTargetDependency */,
+			);
+			name = BFRadialWaveView;
+			productName = BFRadialWaveView;
+			productReference = C22C5153FCC21DAB208B1FF1E2D01980 /* libBFRadialWaveView.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		FED71E83B0707CFE6FD9311180A43060 /* UIColor+BFPaperColors */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5918FE09892029677EA52ED6786216B0 /* Build configuration list for PBXNativeTarget "UIColor+BFPaperColors" */;
+			buildPhases = (
+				921260B3C32F1C01EC6706DC29DA3EE2 /* Sources */,
+				2DB43EAE43073D12E1C7849DFDB62BB9 /* Frameworks */,
+				702C6A203B041DEE64BEBD91BC18FEF5 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pods-UIColor+BFPaperColors";
-			productName = "Pods-UIColor+BFPaperColors";
-			productReference = 654E85C7542ACDEB96BA26A1 /* libPods-UIColor+BFPaperColors.a */;
+			name = "UIColor+BFPaperColors";
+			productName = "UIColor+BFPaperColors";
+			productReference = D864498FB17D2AC3544B6764E144E527 /* libUIColor+BFPaperColors.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		1DD15E1FAD1CF88AB00ED3CF /* Project object */ = {
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 			};
-			buildConfigurationList = 8ADAF4843C2AA776096E2446 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 8CEE9413D1A7B60DBCC354DA;
-			productRefGroup = B219BE9B81D37FAA6FDE89C3 /* Products */;
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = DEB411D326BE5B9A787B62299A15F54F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5F7AEE96FFC4B68FECE62FDC /* Pods */,
-				083345C3465D6ADB3E598F60 /* Pods-BFRadialWaveView */,
-				BF6FAF5A57B932636D6B8B36 /* Pods-UIColor+BFPaperColors */,
+				FE9BA5741AC386880AD1D6AAEE76E89F /* BFRadialWaveView */,
+				F4928EC63DCF48DA463E0A38954A15C1 /* Pods */,
+				FED71E83B0707CFE6FD9311180A43060 /* UIColor+BFPaperColors */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		7D00FC8ACCF1CCFBF89D000D /* Sources */ = {
+		2A84B47ED25AB06EF177F517ECBB2D45 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27C659BB98A6DF89E9757575 /* Pods-UIColor+BFPaperColors-dummy.m in Sources */,
-				E8F26B774B114564A5456695 /* UIColor+BFPaperColors.m in Sources */,
+				3F42C652C6ACBEBE7456BA54CB868B4C /* BFGradientCALayer.m in Sources */,
+				0E0D3AD5BDED2F55DBC98C7A05DF6F81 /* BFRadialWaveView-dummy.m in Sources */,
+				BDC5322A9197C0E6726A9EA24B664C06 /* BFRadialWaveView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BAD4FF9E4E634BA12689F111 /* Sources */ = {
+		921260B3C32F1C01EC6706DC29DA3EE2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85CDF1335CC37AAD9C4CA543 /* BFGradientCALayer.m in Sources */,
-				021228D9A3379B48BA655ECF /* BFRadialWaveView.m in Sources */,
-				B71B888DAA5F671A9B26E63E /* Pods-BFRadialWaveView-dummy.m in Sources */,
+				31D30A9306EF48D3045030DF436DDBEC /* UIColor+BFPaperColors-dummy.m in Sources */,
+				DBAE5F15231AFFE6FE2468A297B54E66 /* UIColor+BFPaperColors.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E2EB3CEA7D5069B27E26CAF5 /* Sources */ = {
+		E84DE12872E7ED371D24B3BCAF57532A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0F8F3DD6B99E48D5AD5E8C0 /* Pods-dummy.m in Sources */,
+				C7280A9D1ACB2C0F892220B8F9467333 /* Pods-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		852D14B9B21D19E98BA8D6DE /* PBXTargetDependency */ = {
+		C558E862CFACFF0D9F004BDEAA0F9195 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "Pods-UIColor+BFPaperColors";
-			target = BF6FAF5A57B932636D6B8B36 /* Pods-UIColor+BFPaperColors */;
-			targetProxy = 3B1E5EE10895DDD23CCE31BD /* PBXContainerItemProxy */;
+			name = "UIColor+BFPaperColors";
+			target = FED71E83B0707CFE6FD9311180A43060 /* UIColor+BFPaperColors */;
+			targetProxy = 38EA5AC2E0871A23F831D32441FE0CF8 /* PBXContainerItemProxy */;
 		};
-		87547B2E1C6B0DB8A6FECF3E /* PBXTargetDependency */ = {
+		CE4729090F8F25DE1116F693566C7AE4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "Pods-UIColor+BFPaperColors";
-			target = BF6FAF5A57B932636D6B8B36 /* Pods-UIColor+BFPaperColors */;
-			targetProxy = 377D80F21CEF712BC096D6FE /* PBXContainerItemProxy */;
+			name = "UIColor+BFPaperColors";
+			target = FED71E83B0707CFE6FD9311180A43060 /* UIColor+BFPaperColors */;
+			targetProxy = 165D85D9AFEB030916788C40BA7182CE /* PBXContainerItemProxy */;
 		};
-		F9C2F117FAFCE5993B131999 /* PBXTargetDependency */ = {
+		FC18ACEDD26CC5926AE5D06720D101C8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "Pods-BFRadialWaveView";
-			target = 083345C3465D6ADB3E598F60 /* Pods-BFRadialWaveView */;
-			targetProxy = BE274859236BB6C5EB507CB4 /* PBXContainerItemProxy */;
+			name = BFRadialWaveView;
+			target = FE9BA5741AC386880AD1D6AAEE76E89F /* BFRadialWaveView */;
+			targetProxy = 260478490B8E2D54A63CC19C647B9628 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0ECBD2BB006B4D942A41CBB0 /* Debug */ = {
+		03CA91998D6773EC5D02B3DB87B8353E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E8DE4D10AA7A691890F5677A /* Pods-UIColor+BFPaperColors-Private.xcconfig */;
 			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-UIColor+BFPaperColors/Pods-UIColor+BFPaperColors-prefix.pch";
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
-		20DA77908EC40ED409D9A08C /* Debug */ = {
+		0B57334D6C23DADAA4F7D802A5760EB2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -427,28 +442,49 @@
 			};
 			name = Debug;
 		};
-		2889F17FC4FA7949D5166A81 /* Release */ = {
+		148DC013F93F860A68D1D577B112E379 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 843196B8EB2F43ED710A0DA9 /* Pods-BFRadialWaveView-Private.xcconfig */;
+			baseConfigurationReference = 923D6E6C9574E48A86606EC60EAF75A5 /* UIColor+BFPaperColors.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-BFRadialWaveView/Pods-BFRadialWaveView-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/UIColor+BFPaperColors/UIColor+BFPaperColors-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
-		361721139247A78203CBFD17 /* Release */ = {
+		290B777C5E0D0D35C64ED46A031FC782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CD67BCA969060ED702DDD23B /* Pods.release.xcconfig */;
+			baseConfigurationReference = D4926316263CDAA23510B3EB459A8EAE /* BFRadialWaveView.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/BFRadialWaveView/BFRadialWaveView-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		8A306D3069F7CA5F4BCB772EFAE5B280 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98C98CDFB3F20F2925F6CD1F141BB14F /* Pods.release.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MACH_O_TYPE = staticlib;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -459,12 +495,13 @@
 			};
 			name = Release;
 		};
-		5A1CF6589F672467D8E30113 /* Debug */ = {
+		9AFD24F8C2DD57E74D3372B80BC21FC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2710727ADAF0E2D5925B5FD1 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 4E762F23EC34ED4A6FF3312D84E33A40 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MACH_O_TYPE = staticlib;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -475,112 +512,82 @@
 			};
 			name = Debug;
 		};
-		AD2AEEEA7B5FD80F85691BA1 /* Debug */ = {
+		DCA4D2C1B0E8323D9102B06F26CDBD34 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 843196B8EB2F43ED710A0DA9 /* Pods-BFRadialWaveView-Private.xcconfig */;
+			baseConfigurationReference = 923D6E6C9574E48A86606EC60EAF75A5 /* UIColor+BFPaperColors.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-BFRadialWaveView/Pods-BFRadialWaveView-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/UIColor+BFPaperColors/UIColor+BFPaperColors-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
-		B7782AD1FFB748D3D7E3B3A2 /* Release */ = {
+		F606CC2CCAB14EFFECDA28E1BF97514F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		FC1BAC3B2A19BD6171FD595C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E8DE4D10AA7A691890F5677A /* Pods-UIColor+BFPaperColors-Private.xcconfig */;
+			baseConfigurationReference = D4926316263CDAA23510B3EB459A8EAE /* BFRadialWaveView.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-UIColor+BFPaperColors/Pods-UIColor+BFPaperColors-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/BFRadialWaveView/BFRadialWaveView-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8ADAF4843C2AA776096E2446 /* Build configuration list for PBXProject "Pods" */ = {
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				20DA77908EC40ED409D9A08C /* Debug */,
-				B7782AD1FFB748D3D7E3B3A2 /* Release */,
+				0B57334D6C23DADAA4F7D802A5760EB2 /* Debug */,
+				03CA91998D6773EC5D02B3DB87B8353E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		93DB331387E92BF309FDF971 /* Build configuration list for PBXNativeTarget "Pods-UIColor+BFPaperColors" */ = {
+		5918FE09892029677EA52ED6786216B0 /* Build configuration list for PBXNativeTarget "UIColor+BFPaperColors" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0ECBD2BB006B4D942A41CBB0 /* Debug */,
-				FC1BAC3B2A19BD6171FD595C /* Release */,
+				DCA4D2C1B0E8323D9102B06F26CDBD34 /* Debug */,
+				148DC013F93F860A68D1D577B112E379 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A5CEF8D43B818B751F47AF28 /* Build configuration list for PBXNativeTarget "Pods-BFRadialWaveView" */ = {
+		5E92D2D9C2902C3EB9E00E25BEDD9F2E /* Build configuration list for PBXNativeTarget "BFRadialWaveView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AD2AEEEA7B5FD80F85691BA1 /* Debug */,
-				2889F17FC4FA7949D5166A81 /* Release */,
+				F606CC2CCAB14EFFECDA28E1BF97514F /* Debug */,
+				290B777C5E0D0D35C64ED46A031FC782 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A898DC6F98CD4D526FB42295 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+		84D63076CA5D85005C77BA0E80B93B46 /* Build configuration list for PBXNativeTarget "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5A1CF6589F672467D8E30113 /* Debug */,
-				361721139247A78203CBFD17 /* Release */,
+				9AFD24F8C2DD57E74D3372B80BC21FC7 /* Debug */,
+				8A306D3069F7CA5F4BCB772EFAE5B280 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 1DD15E1FAD1CF88AB00ED3CF /* Project object */;
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 }
