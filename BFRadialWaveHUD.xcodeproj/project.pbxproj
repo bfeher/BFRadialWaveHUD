@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		273BEEBBE16BD4CF7C1B232E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16C7CFB8338167350C8176C6 /* libPods.a */; };
+		9850F89E73AFA2B490EE8417 /* libPods-BFRadialWaveHUD.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 41A5C83F8A5AE82618709822 /* libPods-BFRadialWaveHUD.a */; };
 		F4B8586D1A96D87C0085C8F7 /* UIImage+KVNEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B8586A1A96D87C0085C8F7 /* UIImage+KVNEmpty.m */; };
 		F4B8586E1A96D87C0085C8F7 /* UIImage+KVNImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = F4B8586C1A96D87C0085C8F7 /* UIImage+KVNImageEffects.m */; };
 		F4D9A73A1A89C60B00C482E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D9A7391A89C60B00C482E5 /* main.m */; };
@@ -32,8 +32,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		16C7CFB8338167350C8176C6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		E6791B66EDC3E979549ABABD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		41A5C83F8A5AE82618709822 /* libPods-BFRadialWaveHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BFRadialWaveHUD.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		580B3C9FC07A31342351EF9F /* Pods-BFRadialWaveHUD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BFRadialWaveHUD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BFRadialWaveHUD/Pods-BFRadialWaveHUD.debug.xcconfig"; sourceTree = "<group>"; };
+		8AAA37BCFC5FA66F01585A2B /* Pods-BFRadialWaveHUD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BFRadialWaveHUD.release.xcconfig"; path = "Pods/Target Support Files/Pods-BFRadialWaveHUD/Pods-BFRadialWaveHUD.release.xcconfig"; sourceTree = "<group>"; };
 		F4B858691A96D87C0085C8F7 /* UIImage+KVNEmpty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+KVNEmpty.h"; path = "../Categories/UIImage+KVNEmpty.h"; sourceTree = "<group>"; };
 		F4B8586A1A96D87C0085C8F7 /* UIImage+KVNEmpty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+KVNEmpty.m"; path = "../Categories/UIImage+KVNEmpty.m"; sourceTree = "<group>"; };
 		F4B8586B1A96D87C0085C8F7 /* UIImage+KVNImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+KVNImageEffects.h"; path = "../Categories/UIImage+KVNImageEffects.h"; sourceTree = "<group>"; };
@@ -54,7 +55,6 @@
 		F4D9A75E1A89C6B700C482E5 /* BFRadialWaveHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BFRadialWaveHUD.h; path = ../Classes/BFRadialWaveHUD.h; sourceTree = "<group>"; };
 		F4D9A75F1A89C6B700C482E5 /* BFRadialWaveHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BFRadialWaveHUD.m; path = ../Classes/BFRadialWaveHUD.m; sourceTree = "<group>"; };
 		F4D9A7611A89C70400C482E5 /* BFRadialWaveHUD.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BFRadialWaveHUD.xib; path = ../Resources/BFRadialWaveHUD.xib; sourceTree = "<group>"; };
-		F53B4BA4D71234529DAE9909 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				273BEEBBE16BD4CF7C1B232E /* libPods.a in Frameworks */,
+				9850F89E73AFA2B490EE8417 /* libPods-BFRadialWaveHUD.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,21 +76,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8823730834B5091FAE7E4EE6 /* Pods */ = {
+		6CEE3A4876EAA9B159345BAE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F53B4BA4D71234529DAE9909 /* Pods.debug.xcconfig */,
-				E6791B66EDC3E979549ABABD /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		C9DAAC8BFCC80260D05F14B2 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				16C7CFB8338167350C8176C6 /* libPods.a */,
+				41A5C83F8A5AE82618709822 /* libPods-BFRadialWaveHUD.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E9E1513B7CE1117E3924E38F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				580B3C9FC07A31342351EF9F /* Pods-BFRadialWaveHUD.debug.xcconfig */,
+				8AAA37BCFC5FA66F01585A2B /* Pods-BFRadialWaveHUD.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		F4B858681A96D85F0085C8F7 /* Categories */ = {
@@ -110,8 +110,8 @@
 				F4D9A7361A89C60B00C482E5 /* BFRadialWaveHUD */,
 				F4D9A7501A89C60B00C482E5 /* BFRadialWaveHUDTests */,
 				F4D9A7351A89C60B00C482E5 /* Products */,
-				8823730834B5091FAE7E4EE6 /* Pods */,
-				C9DAAC8BFCC80260D05F14B2 /* Frameworks */,
+				E9E1513B7CE1117E3924E38F /* Pods */,
+				6CEE3A4876EAA9B159345BAE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -184,13 +184,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4D9A7571A89C60B00C482E5 /* Build configuration list for PBXNativeTarget "BFRadialWaveHUD" */;
 			buildPhases = (
-				EF56DD6C200BA1E4B1590EB7 /* Check Pods Manifest.lock */,
+				8E58AC233697288EC78C0365 /* [CP] Check Pods Manifest.lock */,
 				F4D9A7301A89C60B00C482E5 /* Sources */,
 				F4D9A7311A89C60B00C482E5 /* Frameworks */,
 				F4A8265D1A96C0CB00AE75ED /* ShellScript */,
 				F4D9A7321A89C60B00C482E5 /* Resources */,
-				A7B0A003B3172BB316D14D4F /* Copy Pods Resources */,
-				CD11DB0988F6E83F7B13611B /* Embed Pods Frameworks */,
+				BE353BF388739C8B3EB841FA /* [CP] Embed Pods Frameworks */,
+				7044277D29DB59EA8CE12A46 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -278,49 +278,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		A7B0A003B3172BB316D14D4F /* Copy Pods Resources */ = {
+		7044277D29DB59EA8CE12A46 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BFRadialWaveHUD/Pods-BFRadialWaveHUD-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CD11DB0988F6E83F7B13611B /* Embed Pods Frameworks */ = {
+		8E58AC233697288EC78C0365 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		EF56DD6C200BA1E4B1590EB7 /* Check Pods Manifest.lock */ = {
+		BE353BF388739C8B3EB841FA /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BFRadialWaveHUD/Pods-BFRadialWaveHUD-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F4A8265D1A96C0CB00AE75ED /* ShellScript */ = {
@@ -469,7 +469,7 @@
 		};
 		F4D9A7581A89C60B00C482E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F53B4BA4D71234529DAE9909 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 580B3C9FC07A31342351EF9F /* Pods-BFRadialWaveHUD.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -484,7 +484,7 @@
 		};
 		F4D9A7591A89C60B00C482E5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E6791B66EDC3E979549ABABD /* Pods.release.xcconfig */;
+			baseConfigurationReference = 8AAA37BCFC5FA66F01585A2B /* Pods-BFRadialWaveHUD.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
