@@ -354,7 +354,7 @@ NSArray *discoColors = @[[UIColor paperColorIndigoA100],
 [hud showProgress:0.f withMessage:@"Downloading..."];
 ```
 
-Cocoapods
+CocoaPods
 -------
 
 CocoaPods are the best way to manage library dependencies in Objective-C projects.
