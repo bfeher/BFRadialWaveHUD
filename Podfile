@@ -1,3 +1,6 @@
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '7.1'
-pod 'BFRadialWaveView', '~> 1.4.6'
+platform:ios, '7.1'
+
+target 'BFRadialWaveHUD' do
+	pod 'BFRadialWaveView'
+end
