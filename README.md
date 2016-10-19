@@ -363,7 +363,7 @@ Learn more at http://cocoapods.org
 Add this to your podfile to add BFRadialWaveHUD to your project.
 ```ruby
 platform :ios, '7.1'
-pod 'BFRadialWaveHUD', '~> 1.5.4'
+pod 'BFRadialWaveHUD'
 ```
 
 

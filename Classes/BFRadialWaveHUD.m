@@ -11,8 +11,7 @@
 #import "UIImage+KVNImageEffects.h"
 #import "UIImage+KVNEmpty.h"
 // Pods:
-#import "BFRadialWaveView.h"
-#import "UIColor+BFPaperColors.h"
+#import <BFRadialWaveView/BFRadialWaveView.h>
 
 
 #define BFIpad UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad
@@ -285,7 +284,7 @@ static CGFloat const BFRadialWaveHUD_ContentViewWithoutStatusCornerRadius = 15.0
     
     self.container = containerView;
     self.circleCount = numberOfCircles;
-    self.circleColor = circleColor ? circleColor : [UIColor paperColorGray50];
+    self.circleColor = circleColor ? circleColor : [UIColor colorWithRed:250.f/255.f green:250.f/255.f blue:250.f/255.f alpha:1];
     self.lineWidth = lineWidth;
     self.mode = mode;
     self.isFullScreen = fullscreen;

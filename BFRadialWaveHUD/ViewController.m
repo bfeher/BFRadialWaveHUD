@@ -9,8 +9,7 @@
 #import "ViewController.h"
 // Classes:
 #import "BFRadialWaveHUD.h"
-// Pods:
-#import "UIColor+BFPaperColors.h"
+
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UISwitch *blurSwitch;
@@ -165,36 +164,36 @@
     BFRadialWaveHUD *hud = [[BFRadialWaveHUD alloc] initWithView:self.view
                                                       fullScreen:self.fullScreenSwitch.isOn
                                                          circles:20
-                                                     circleColor:[UIColor paperColorGray800]
+                                                     circleColor:[UIColor colorWithRed:66.f/255.f green:66.f/255.f blue:66.f/255.f alpha:1]
                                                             mode:(BFRadialWaveHUDMode)self.modeSegmentedControl.selectedSegmentIndex
                                                      strokeWidth:4];
-    hud.messageColor = [UIColor paperColorDeepPurpleA200];
+    hud.messageColor = [UIColor colorWithRed:124.f/255.f green:77.f/255.f blue:1 alpha:1];
     hud.HUDColor = [UIColor colorWithWhite:1.f alpha:0.85f];
     hud.backgroundFadeColor = [UIColor colorWithWhite:0.13f alpha:0.6f];
     [hud setBlurBackground:self.blurSwitch.isOn];
     [hud showProgress:0.f withMessage:@"Try me in other modes too!\n(and check out my custom disco)"];
-    hud.progressCircleColor = [UIColor paperColorLightGreen100];
+    hud.progressCircleColor = [UIColor colorWithRed:220.f/255.f green:237.f/255.f blue:200.f/255.f alpha:1];
     [self updateProgressForCustomHUD:hud];
     
-    NSArray *discoColors = @[[UIColor paperColorIndigoA100],
-                             [UIColor paperColorIndigoA200],
-                             [UIColor paperColorIndigoA400],
-                             [UIColor paperColorIndigoA700]];
+    NSArray *discoColors = @[[UIColor colorWithRed:140.f/255.f green:158.f/255.f blue:1 alpha:1],
+                             [UIColor colorWithRed:83.f/255.f green:109.f/255.f blue:254.f/255.f alpha:1],
+                             [UIColor colorWithRed:61.f/255.f green:90.f/255.f blue:254.f/255.f alpha:1],
+                             [UIColor colorWithRed:48.f/255.f green:79.f/255.f blue:254.f/255.f alpha:1]];
     [hud setDiscoColors:discoColors];
     [hud disco:self.discoSwitch.isOn];
     
     dispatch_main_after(5.5f, ^{
         if (self.successFailSwitch) {
-            hud.progressCircleColor = [UIColor paperColorLightBlue];
-            hud.checkmarkColor = [UIColor paperColorLightBlueA200];
+            hud.progressCircleColor = [UIColor colorWithRed:3.f/255.f green:169.f/255.f blue:244.f/255.f alpha:1];
+            hud.checkmarkColor = [UIColor colorWithRed:64.f/255.f green:196.f/255.f blue:1 alpha:1];
             [hud showSuccessWithMessage:@"Success!" completion:^(BOOL finished) {
                 NSLog(@"success handler...");
                 [hud dismissAfterDelay:0.6f];
             }];
         }
         else {
-            hud.progressCircleColor = [UIColor paperColorRed];
-            hud.crossColor = [UIColor paperColorRedA200];
+            hud.progressCircleColor = [UIColor colorWithRed:244.f/255.f green:67.f/255.f blue:54.f/255.f alpha:1];
+            hud.crossColor = [UIColor colorWithRed:1 green:82.f/255.f blue:82.f/255.f alpha:1];
             [hud showErrorWithMessage:@"Error!" completion:^(BOOL finished) {
                 NSLog(@"Error handler...");
                 [hud dismissAfterDelay:0.6f];
@@ -231,15 +230,15 @@
     });
     dispatch_main_after(2.5f, ^{
         [hud updateProgress:0.5f];
-        hud.progressCircleColor = [UIColor paperColorLightGreen300];
+        hud.progressCircleColor = [UIColor colorWithRed:174.f/255.f green:213.f/255.f blue:129.f/255.f alpha:1];
     });
     dispatch_main_after(2.8f, ^{
         [hud updateProgress:0.6f];
-        hud.progressCircleColor = [UIColor paperColorLightGreen600];
+        hud.progressCircleColor = [UIColor colorWithRed:124.f/255.f green:179.f/255.f blue:66.f/255.f alpha:1];
     });
     dispatch_main_after(3.7f, ^{
         [hud updateProgress:0.93f];
-        hud.progressCircleColor = [UIColor paperColorLightGreen900];
+        hud.progressCircleColor = [UIColor colorWithRed:51.f/255.f green:105.f/255.f blue:30.f/255.f alpha:1];
     });
     dispatch_main_after(5.0f, ^{
         [hud updateProgress:0.96f];
