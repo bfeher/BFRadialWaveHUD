@@ -55,12 +55,11 @@
 #pragma mark - Action Handlers
 - (IBAction)showBasic:(UIButton *)sender
 {
-    BFRadialWaveHUD *hud = [[BFRadialWaveHUD alloc] initWithView:self.view
-                                                      fullScreen:self.fullScreenSwitch.isOn
-                                                         circles:self.numberOfCircles
-                                                     circleColor:nil
-                                                            mode:(BFRadialWaveHUDMode)self.modeSegmentedControl.selectedSegmentIndex
-                                                     strokeWidth:self.circleStrokeWidth];
+    BFRadialWaveHUD *hud = [[BFRadialWaveHUD alloc] initWithFullScreen:self.fullScreenSwitch.isOn
+                                                               circles:self.numberOfCircles
+                                                           circleColor:nil
+                                                                  mode:(BFRadialWaveHUDMode)self.modeSegmentedControl.selectedSegmentIndex
+                                                           strokeWidth:self.circleStrokeWidth];
     [hud setBlurBackground:self.blurSwitch.isOn];
     hud.tapToDismiss = YES;
     hud.tapToDismissCompletionBlock = ^void(BOOL finished) {
@@ -69,18 +68,17 @@
             NSLog(@"...finished running tapToDismissCompletionBlock.");
         }
     };
-    [hud show];
+    [hud showInView:self.view];
     [hud disco:self.discoSwitch.isOn];
 }
 
 - (IBAction)showBasicWithStatus:(UIButton *)sender
 {
-    BFRadialWaveHUD *hud = [[BFRadialWaveHUD alloc] initWithView:self.view
-                                                      fullScreen:self.fullScreenSwitch.isOn
-                                                         circles:self.numberOfCircles
-                                                     circleColor:nil
-                                                            mode:(BFRadialWaveHUDMode)self.modeSegmentedControl.selectedSegmentIndex
-                                                     strokeWidth:self.circleStrokeWidth];
+    BFRadialWaveHUD *hud = [[BFRadialWaveHUD alloc] initWithFullScreen:self.fullScreenSwitch.isOn
+                                                               circles:self.numberOfCircles
+                                                           circleColor:nil
+                                                                  mode:(BFRadialWaveHUDMode)self.modeSegmentedControl.selectedSegmentIndex
+                                                           strokeWidth:self.circleStrokeWidth];
     [hud setBlurBackground:self.blurSwitch.isOn];
     hud.tapToDismiss = YES;
     hud.tapToDismissCompletionBlock = ^void(BOOL finished) {
@@ -89,21 +87,20 @@
             NSLog(@"...finished running tapToDismissCompletionBlock.");
         }
     };
-    [hud showWithMessage:@"Loading..."];
+    [hud showWithMessage:@"Loading..." inView:self.view];
     [hud disco:self.discoSwitch.isOn];
 }
 
 - (IBAction)showProgressAndStatus:(UIButton *)sender
 {
     self.successFailSwitch = !self.successFailSwitch;
-    BFRadialWaveHUD *hud = [[BFRadialWaveHUD alloc] initWithView:self.view
-                                                      fullScreen:self.fullScreenSwitch.isOn
+    BFRadialWaveHUD *hud = [[BFRadialWaveHUD alloc] initWithFullScreen:self.fullScreenSwitch.isOn
                                                          circles:self.numberOfCircles
                                                      circleColor:nil
                                                             mode:(BFRadialWaveHUDMode)self.modeSegmentedControl.selectedSegmentIndex
                                                      strokeWidth:self.circleStrokeWidth];
     [hud setBlurBackground:self.blurSwitch.isOn];
-    [hud showProgress:0.f withMessage:@"Loading with progress..."];
+    [hud showWithProgress:0.f withMessage:@"Loading with progress..." inView:self.view];
     [hud disco:self.discoSwitch.isOn];
     [self updateProgressForHUD:hud];
     
@@ -112,16 +109,20 @@
     });
     dispatch_main_after(5.5f, ^{
         if (self.successFailSwitch) {
-            [hud showSuccessWithMessage:@"Success!" completion:^(BOOL finished) {
-                NSLog(@"success handler...");
-                [hud dismissAfterDelay:0.6f];
-            }];
+            [hud showSuccessWithMessage:@"Success!"
+                                 inView:self.view
+                             completion:^(BOOL finished) {
+                                 NSLog(@"success handler...");
+                                 [hud dismissAfterDelay:0.6f];
+                             }];
         }
         else {
-            [hud showErrorWithMessage:@"Error!" completion:^(BOOL finished) {
-                NSLog(@"Error handler...");
-                [hud dismissAfterDelay:0.6f];
-            }];
+            [hud showErrorWithMessage:@"Error!"
+                               inView:self.view
+                           completion:^(BOOL finished) {
+                               NSLog(@"Error handler...");
+                               [hud dismissAfterDelay:0.6f];
+                           }];
         }
     });
 
@@ -129,29 +130,31 @@
 
 - (IBAction)showSuccessAndStatus:(UIButton *)sender
 {
-    BFRadialWaveHUD *hud = [[BFRadialWaveHUD alloc] initWithView:self.view
-                                                      fullScreen:self.fullScreenSwitch.isOn
-                                                         circles:self.numberOfCircles
-                                                     circleColor:nil
-                                                            mode:(BFRadialWaveHUDMode)self.modeSegmentedControl.selectedSegmentIndex
-                                                     strokeWidth:self.circleStrokeWidth];
+    BFRadialWaveHUD *hud = [[BFRadialWaveHUD alloc] initWithFullScreen:self.fullScreenSwitch.isOn
+                                                               circles:self.numberOfCircles
+                                                           circleColor:nil
+                                                                  mode:(BFRadialWaveHUDMode)self.modeSegmentedControl.selectedSegmentIndex
+                                                           strokeWidth:self.circleStrokeWidth];
     [hud setBlurBackground:self.blurSwitch.isOn];
-    [hud showSuccessWithMessage:@"Success!" completion:^(BOOL finished) {
-        NSLog(@"success handler...");
-        [hud dismissAfterDelay:1.f];
-    }];
+    [hud showSuccessWithMessage:@"Success!"
+                         inView:self.view
+                     completion:^(BOOL finished) {
+                         NSLog(@"success handler...");
+                         [hud dismissAfterDelay:1.f];
+                     }];
 }
 
 - (IBAction)showErrorAndStatus:(UIButton *)sender
 {
-    BFRadialWaveHUD *hud = [[BFRadialWaveHUD alloc] initWithView:self.view
-                                                      fullScreen:self.fullScreenSwitch.isOn
-                                                         circles:self.numberOfCircles
-                                                     circleColor:nil
-                                                            mode:(BFRadialWaveHUDMode)self.modeSegmentedControl.selectedSegmentIndex
-                                                     strokeWidth:self.circleStrokeWidth];
+    BFRadialWaveHUD *hud = [[BFRadialWaveHUD alloc] initWithFullScreen:self.fullScreenSwitch.isOn
+                                                               circles:self.numberOfCircles
+                                                           circleColor:nil
+                                                                  mode:(BFRadialWaveHUDMode)self.modeSegmentedControl.selectedSegmentIndex
+                                                           strokeWidth:self.circleStrokeWidth];
     [hud setBlurBackground:self.blurSwitch.isOn];
-    [hud showErrorWithMessage:@"Error!" completion:^(BOOL finished) {
+    [hud showErrorWithMessage:@"Error!"
+                       inView:self.view
+                   completion:^(BOOL finished) {
         NSLog(@"error handler...");
         [hud dismissAfterDelay:0.6f];
     }];
@@ -161,17 +164,16 @@
 {
     self.successFailSwitch = !self.successFailSwitch;
     
-    BFRadialWaveHUD *hud = [[BFRadialWaveHUD alloc] initWithView:self.view
-                                                      fullScreen:self.fullScreenSwitch.isOn
-                                                         circles:20
-                                                     circleColor:[UIColor colorWithRed:66.f/255.f green:66.f/255.f blue:66.f/255.f alpha:1]
-                                                            mode:(BFRadialWaveHUDMode)self.modeSegmentedControl.selectedSegmentIndex
-                                                     strokeWidth:4];
+    BFRadialWaveHUD *hud = [[BFRadialWaveHUD alloc] initWithFullScreen:self.fullScreenSwitch.isOn
+                                                               circles:5
+                                                           circleColor:[UIColor colorWithRed:66.f/255.f green:66.f/255.f blue:66.f/255.f alpha:1]
+                                                                  mode:(BFRadialWaveHUDMode)self.modeSegmentedControl.selectedSegmentIndex
+                                                           strokeWidth:4];
     hud.messageColor = [UIColor colorWithRed:124.f/255.f green:77.f/255.f blue:1 alpha:1];
     hud.HUDColor = [UIColor colorWithWhite:1.f alpha:0.85f];
     hud.backgroundFadeColor = [UIColor colorWithWhite:0.13f alpha:0.6f];
     [hud setBlurBackground:self.blurSwitch.isOn];
-    [hud showProgress:0.f withMessage:@"Try me in other modes too!\n(and check out my custom disco)"];
+    [hud showWithProgress:0.f withMessage:@"Try me in other modes too!\n(and check out my custom disco)" inView:self.view];
     hud.progressCircleColor = [UIColor colorWithRed:220.f/255.f green:237.f/255.f blue:200.f/255.f alpha:1];
     [self updateProgressForCustomHUD:hud];
     
@@ -186,7 +188,9 @@
         if (self.successFailSwitch) {
             hud.progressCircleColor = [UIColor colorWithRed:3.f/255.f green:169.f/255.f blue:244.f/255.f alpha:1];
             hud.checkmarkColor = [UIColor colorWithRed:64.f/255.f green:196.f/255.f blue:1 alpha:1];
-            [hud showSuccessWithMessage:@"Success!" completion:^(BOOL finished) {
+            [hud showSuccessWithMessage:@"Success!"
+                                 inView:self.view
+                             completion:^(BOOL finished) {
                 NSLog(@"success handler...");
                 [hud dismissAfterDelay:0.6f];
             }];
@@ -194,7 +198,9 @@
         else {
             hud.progressCircleColor = [UIColor colorWithRed:244.f/255.f green:67.f/255.f blue:54.f/255.f alpha:1];
             hud.crossColor = [UIColor colorWithRed:1 green:82.f/255.f blue:82.f/255.f alpha:1];
-            [hud showErrorWithMessage:@"Error!" completion:^(BOOL finished) {
+            [hud showErrorWithMessage:@"Error!"
+                               inView:self.view
+                           completion:^(BOOL finished) {
                 NSLog(@"Error handler...");
                 [hud dismissAfterDelay:0.6f];
             }];
