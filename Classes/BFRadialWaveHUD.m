@@ -46,6 +46,7 @@
 @property (nonatomic) NSArray *constraintsToSuperview;
 
 @property UIView *container;
+//@property UIView *containerView;
 @property NSString *message;
 @property BOOL isFullScreen;
 @property (nonatomic) CGFloat progress;
@@ -78,6 +79,27 @@ static CGFloat const BFRadialWaveHUD_ContentViewWithoutStatusCornerRadius = 15.0
 
 
 #pragma mark - Custom Initializers
+- (instancetype)initWithFullScreen:(BOOL)fullscreen
+                           circles:(NSInteger)numberOfCircles
+                       circleColor:(UIColor *)circleColor
+                              mode:(BFRadialWaveHUDMode)mode
+                       strokeWidth:(CGFloat)strokeWidth
+{
+    UINib *nib = [UINib nibWithNibName:@"BFRadialWaveHUD"
+                                bundle:[NSBundle bundleForClass:[self class]]];
+    NSArray *nibViews = [nib instantiateWithOwner:self
+                                          options:0];
+    self = nibViews[0];
+    if (self) {
+        [self setUpFullScreen:fullscreen
+              numberOfCircles:numberOfCircles
+                        color:circleColor
+                         mode:mode
+                  strokeWidth:strokeWidth];
+    }
+    return self;
+}
+
 - (instancetype)initWithView:(UIView *)containerView
                   fullScreen:(BOOL)fullscreen
                      circles:(NSInteger)numberOfCircles
@@ -257,6 +279,63 @@ static CGFloat const BFRadialWaveHUD_ContentViewWithoutStatusCornerRadius = 15.0
 
 
 #pragma mark - Setup
+- (void)setUpFullScreen:(BOOL)fullscreen
+        numberOfCircles:(NSInteger)circles
+                  color:(UIColor *)circleColor
+                   mode:(BFRadialWaveHUDMode)mode
+            strokeWidth:(CGFloat)strokeWidth
+{
+    NSInteger numberOfCircles = circles;
+    if (circles < 3) {
+        NSLog(@"Must have at least 3 circles! Creating %ld more to accomodate for this...", 3 - (long)circles);
+        numberOfCircles = 3;
+    }
+    
+    CGFloat lineWidth = strokeWidth;
+    if (lineWidth < 1.f) {
+        NSLog(@"Stroke width must fall in the range [1.0, 5.0]. Adjusting to 1.f...");
+        lineWidth = 1.f;
+    }
+    else if (lineWidth > 5.f) {
+        NSLog(@"Stroke width must fall in the range [1.0, 5.0]. Adjusting to 5.f...");
+        lineWidth = 5.f;
+    }
+    
+    self.circleCount = numberOfCircles;
+    self.circleColor = circleColor ? circleColor : [UIColor colorWithRed:250.f/255.f green:250.f/255.f blue:250.f/255.f alpha:1];
+    self.lineWidth = lineWidth;
+    self.mode = mode;
+    self.isFullScreen = fullscreen;
+    
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // Defaults for visual properties:                                                                                      //
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // Private:
+    self.animationDuration           = 1.f;
+    self.messageAnimationDuration    = 0.5f;
+    self.message                     = nil;
+    self.atTheDisco                  = NO;
+    // Public:
+    self.messageFont                 = [UIFont fontWithName:@"HelveticaNeue-Light" size:14.f];
+    self.messageColor                = self.circleColor;
+    self.HUDColor                    = [UIColor colorWithWhite:0.13f alpha:0.85f];
+    self.backgroundFadeColor         = [UIColor colorWithWhite:1.f alpha:0.6f];
+    self.progressCircleColor         = self.circleColor;
+    self.checkmarkColor              = self.circleColor;
+    self.crossColor                  = self.circleColor;
+    self.tapToDismiss                = NO;
+    self.tapToDismissCompletionBlock = nil;
+    _isShowing                       = NO;
+    self.discoColors                 = nil;
+    self.discoSpeed                  = 0.33f;
+    self.alpha                       = 0;
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    
+    self.backgroundColor = fullscreen ? [UIColor clearColor] : self.backgroundFadeColor;
+    
+    [self setupRadialWaveView];
+}
+
 - (void)setUpWithContainer:(UIView *)containerView
                 fullScreen:(BOOL)fullscreen
            numberOfCircles:(NSInteger)circles
@@ -433,6 +512,19 @@ static CGFloat const BFRadialWaveHUD_ContentViewWithoutStatusCornerRadius = 15.0
 
 
 #pragma mark - Loading
+- (void)showInView:(UIView *)containerView {
+    [self showWithProgress:0
+               withMessage:nil
+                    inView:containerView];
+}
+
+- (void)showWithMessage:(NSString *)message inView:(UIView *)containerView {
+    [self showWithProgress:0
+               withMessage:message
+                    inView:containerView];
+}
+
+#pragma mark Marked for Deprecation & Deletion
 - (void)show
 {
     [self showProgress:0 withMessage:nil];
@@ -443,7 +535,25 @@ static CGFloat const BFRadialWaveHUD_ContentViewWithoutStatusCornerRadius = 15.0
     [self showProgress:0 withMessage:message];
 }
 
+
 #pragma mark - Progress
+- (void)showWithProgress:(CGFloat)progress
+                  inView:(UIView *)containerView {
+    [self showWithProgress:progress
+               withMessage:nil
+                    inView:containerView];
+}
+
+- (void)showWithProgress:(CGFloat)progress
+             withMessage:(NSString *)message
+                  inView:(UIView *)containerView {
+    self.message = message;
+    [self appearInView:containerView];
+    [self.radialWaveView showProgress:progress];
+    [self updateRadialWaveViewConstraints];
+}
+
+#pragma mark Marked for Deprecation & Deletion
 - (void)showProgress:(CGFloat)progress
 {
     [self showProgress:progress withMessage:nil];
@@ -460,6 +570,36 @@ static CGFloat const BFRadialWaveHUD_ContentViewWithoutStatusCornerRadius = 15.0
 
 
 #pragma mark - Success
+- (void)showSuccessInView:(UIView *)containerView {
+    [self showSuccessWithMessage:nil
+                          inView:containerView
+                      completion:nil];
+}
+
+- (void)showSuccessInView:(UIView *)containerView withCompletion:(void (^)(BOOL))completionBlock {
+    [self showSuccessWithMessage:nil
+                          inView:containerView
+                      completion:completionBlock];
+}
+
+- (void)showSuccessWithMessage:(NSString *)message inView:(UIView *)containerView {
+    [self showSuccessWithMessage:message
+                          inView:containerView
+                      completion:nil];
+}
+
+- (void)showSuccessWithMessage:(NSString *)message
+                        inView:(UIView *)containerView
+                    completion:(void (^)(BOOL))completionBlock {
+    self.message = message;
+    self.completionBlock = completionBlock;
+    [self appearInView:containerView];
+    [self updateRadialWaveViewConstraintsManuallyToDiameter:self.radialWaveView.diameter];
+    [self.radialWaveView showSuccess];
+    [self updateRadialWaveViewConstraints];
+}
+
+#pragma mark Marked for Deprecation & Deletion
 - (void)showSuccess
 {
     [self showSuccessWithMessage:nil completion:nil];
@@ -488,6 +628,38 @@ static CGFloat const BFRadialWaveHUD_ContentViewWithoutStatusCornerRadius = 15.0
 
 
 #pragma mark - Error
+- (void)showErrorInView:(UIView *)containerView {
+    [self showErrorWithMessage:nil
+                        inView:containerView
+                    completion:nil];
+}
+
+- (void)showErrorInView:(UIView *)containerView
+         withCompletion:(void (^)(BOOL))completionBlock {
+    [self showErrorWithMessage:nil
+                        inView:containerView
+                    completion:completionBlock];
+}
+
+- (void)showErrorWithMessage:(NSString *)message
+                      inView:(UIView *)containerView {
+    [self showErrorWithMessage:message
+                        inView:containerView
+                    completion:nil];
+}
+
+- (void)showErrorWithMessage:(NSString *)message
+                      inView:(UIView *)containerView
+                  completion:(void (^)(BOOL))completionBlock {
+    self.message = message;
+    self.completionBlock = completionBlock;
+    [self appearInView:containerView];
+    [self updateRadialWaveViewConstraintsManuallyToDiameter:self.radialWaveView.diameter];
+    [self.radialWaveView showError];
+    [self updateRadialWaveViewConstraints];
+}
+
+#pragma mark Marked for Deprecation & Deletion
 - (void)showError
 {
     [self showErrorWithMessage:nil completion:nil];
@@ -698,8 +870,37 @@ static CGFloat const BFRadialWaveHUD_ContentViewWithoutStatusCornerRadius = 15.0
 
 
 #pragma mark - Other
+- (void)appearInView:(UIView *)containerView {
+    self.frame = containerView.bounds;
+//    self.container = containerView;
+    
+    if (self.isShowing) {
+        [UIView animateWithDuration:BFRadialWaveHUD_LayoutAnimationDuration
+                         animations:^{
+                             [self setupUI];
+                         }];
+    }
+    else {
+        //        [self updateBackgroundImage];
+        [self setupUI];
+        [containerView addSubview:self];
+        _isShowing = YES;
+        [UIView animateWithDuration:0.3f
+                              delay:0
+                            options:UIViewAnimationOptionCurveEaseOut
+                         animations:^{
+                             self.alpha = 1;
+                         } completion:^(BOOL finished) {
+                             // nothing for now
+                         }];
+    }
+}
+
 - (void)appear
 {
+//    self.frame = containerView.bounds;
+//    self.container = containerView;
+
     if (self.isShowing) {
         [UIView animateWithDuration:BFRadialWaveHUD_LayoutAnimationDuration
                          animations:^{
