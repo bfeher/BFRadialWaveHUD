@@ -5,6 +5,13 @@ BFRadialWaveHUD
 > Note that this changelog was started very late, at version 1.2.4. Non consecutive jumps in changelog mean that there were incremental builds that weren't released as a pod, typically while solving a problem.
 
 
+2.0.0
+---------
+* (^) Updated initializer to no longer take a view parameter.
+* (^) Updated all show functions to take in a new view parameter.
+* (^) Updated CocoaPod stuff.
+
+
 1.5.5
 ---------
 * (^) Updated workspace to Xcode 8.
@@ -25,7 +32,7 @@ BFRadialWaveHUD
 1.5.2
 ---------
 * (^) Fixed bug in `updateProgress:(CGFloat)progress` which was causing the HUD to reappear when new progress was sent, even after dismissal. This would happen if you didn't cancel the process which was adding progress to the HUD (for instance, downloading a file over the webz).
-* (^) Fixed bug where `self.radialWaveView` was being setup multiple times, causing it to have more circles than intended and its previous progress amount to carry over to new HUDs. 
+* (^) Fixed bug where `self.radialWaveView` was being setup multiple times, causing it to have more circles than intended and its previous progress amount to carry over to new HUDs.
 * (^) Fixed bug where the progress circle would sometimes be choppy. It now only climbs forward.
 
 

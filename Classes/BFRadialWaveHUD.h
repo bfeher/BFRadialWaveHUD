@@ -35,6 +35,23 @@ extern CGFloat const BFRadialWaveHUD_CircleProgressViewToStatusLabelVerticalSpac
 /**
  *  Custom initializer. Use this when you make a BFRadialWaveHUD in code.
  *
+ *  @param fullscreen      BOOL flag to display in fullscreen or not.
+ *  @param numberOfCircles NSInteger number of circles. Min = 3, Max = 20.
+ *  @param circleColor     UIColor to set the circles' strokeColor to.
+ *  @param mode            BFRadialWaveHUDMode
+ *  @param strokeWidth     CGFloat stroke width of the circles.
+ *
+ *  @return Returns a BFRadialWaveHUD! Aww yiss!
+ */
+- (instancetype)initWithFullScreen:(BOOL)fullscreen
+                           circles:(NSInteger)numberOfCircles
+                       circleColor:(UIColor *)circleColor
+                              mode:(BFRadialWaveHUDMode)mode
+                       strokeWidth:(CGFloat)strokeWidth;
+
+/**
+ *  Custom initializer. Use this when you make a BFRadialWaveHUD in code.
+ *
  *  @param containerView   The UIView to place the HUD in.
  *  @param fullscreen      BOOL flag to display in fullscreen or not.
  *  @param numberOfCircles NSInteger number of circles. Min = 3, Max = 20.
@@ -49,30 +66,66 @@ extern CGFloat const BFRadialWaveHUD_CircleProgressViewToStatusLabelVerticalSpac
                      circles:(NSInteger)numberOfCircles
                  circleColor:(UIColor *)circleColor
                         mode:(BFRadialWaveHUDMode)mode
-                 strokeWidth:(CGFloat)strokeWidth;
+                 strokeWidth:(CGFloat)strokeWidth __attribute__((deprecated("Deprecated as of version 2.0. Use 'initWithFullScreen..strokeWidth' instead.")));
 
 
 #pragma mark - Loading
 /**
  *  Show an indeterminate HUD.
+ *
+ *  @param containerView   The UIView to place the HUD in.
  */
-- (void)show;
+- (void)showInView:(UIView *)containerView;
+
+/**
+ *  Show an indeterminate HUD.
+ */
+- (void)show __attribute__((deprecated("Deprecated as of version 2.0. Use 'showInView:' instead.")));
+
+/**
+ *  Show an indeterminate HUD with a message.
+ *
+ *  @param message          NSString message to display below the spinning BFRadialWaveView.
+ *  @param containerView    The UIView to place the HUD in.
+ */
+- (void)showWithMessage:(NSString *)message
+                 inView:(UIView *)containerView;
 
 /**
  *  Show an indeterminate HUD with a message.
  *
  *  @param message NSString message to display below the spinning BFRadialWaveView.
  */
-- (void)showWithMessage:(NSString *)message;
+- (void)showWithMessage:(NSString *)message __attribute__((deprecated("Deprecated as of version 2.0. Use 'showWithMessage:inView:' instead.")));
 
 
 #pragma mark - Progress
 /**
  *  Show a BFRadialWaveHUD with an extra circle for progress.
  *
+ *  @param progress         CGFloat progress (range [0.f, 1.f]) to show.
+ *  @param containerView    The UIView to place the HUD in.
+ */
+- (void)showWithProgress:(CGFloat)progress
+                  inView:(UIView *)containerView;
+
+/**
+ *  Show a BFRadialWaveHUD with an extra circle for progress.
+ *
  *  @param progress CGFloat progress (range [0.f, 1.f]) to show.
  */
-- (void)showProgress:(CGFloat)progress;
+- (void)showProgress:(CGFloat)progress __attribute__((deprecated("Deprecated as of version 2.0. Use 'showWithProgress:inView:' instead.")));
+
+/**
+ *  Show a BFRadialWaveHUD with an extra circle for progress with a message.
+ *
+ *  @param progress         CGFloat progress (range [0.f, 1.f]) to show.
+ *  @param message          NSString message to display below the spinning BFRadialWaveView.
+ *  @param containerView    The UIView to place the HUD in.
+ */
+- (void)showWithProgress:(CGFloat)progress
+             withMessage:(NSString *)message
+                  inView:(UIView *)containerView;
 
 /**
  *  Show a BFRadialWaveHUD with an extra circle for progress with a message.
@@ -81,28 +134,64 @@ extern CGFloat const BFRadialWaveHUD_CircleProgressViewToStatusLabelVerticalSpac
  *  @param message NSString message to display below the spinning BFRadialWaveView.
  */
 - (void)showProgress:(CGFloat)progress
-         withMessage:(NSString *)message;
+         withMessage:(NSString *)message __attribute__((deprecated("Deprecated as of version 2.0. Use 'showWithProgress:withMessage:inView:' instead.")));
 
 
 #pragma mark - Success
 /**
  *  Show a success checkmark, indicating success.
+ *
+ *  @param containerView    The UIView to place the HUD in.
  */
-- (void)showSuccess;
+- (void)showSuccessInView:(UIView *)containerView;
+
+/**
+ *  Show a success checkmark, indicating success.
+ */
+- (void)showSuccess __attribute__((deprecated("Deprecated as of version 2.0. Use 'showSuccessInView:' instead.")));
+
+/**
+ *  Show a success checkmark and run a block of code after it completes.
+ *
+ *  @param containerView    The UIView to place the HUD in.
+ *  @param completionBlock  A block of code to run on completion.
+ */
+- (void)showSuccessInView:(UIView *)containerView
+           withCompletion:(void (^)(BOOL finished))completionBlock;
 
 /**
  *  Show a success checkmark and run a block of code after it completes.
  *
  *  @param completionBlock A block of code to run on completion.
  */
-- (void)showSuccessWithCompletion:(void (^)(BOOL finished))completionBlock;
+- (void)showSuccessWithCompletion:(void (^)(BOOL finished))completionBlock __attribute__((deprecated("Deprecated as of version 2.0. Use 'showSuccessInView:withCompletion:' instead.")));
+
+/**
+ *  Show a success checkmark with a message.
+ *
+ *  @param message          NSString message to display below the spinning BFRadialWaveView.
+ *  @param containerView    The UIView to place the HUD in.
+ */
+- (void)showSuccessWithMessage:(NSString *)message
+                        inView:(UIView *)containerView;
 
 /**
  *  Show a success checkmark with a message.
  *
  *  @param message NSString message to display below the spinning BFRadialWaveView.
  */
-- (void)showSuccessWithMessage:(NSString *)message;
+- (void)showSuccessWithMessage:(NSString *)message __attribute__((deprecated("Deprecated as of version 2.0. Use 'showSuccessWithMessage:inView:' instead.")));
+
+/**
+ *  Show a success checkmark with a message and run a block of code after it completes.
+ *
+ *  @param message          NSString message to display below the spinning BFRadialWaveView.
+ *  @param containerView    The UIView to place the HUD in.
+ *  @param completionBlock  A block of code to run on completion.
+ */
+- (void)showSuccessWithMessage:(NSString *)message
+                        inView:(UIView *)containerView
+                    completion:(void (^)(BOOL finished))completionBlock;
 
 /**
  *  Show a success checkmark with a message and run a block of code after it completes.
@@ -111,28 +200,66 @@ extern CGFloat const BFRadialWaveHUD_CircleProgressViewToStatusLabelVerticalSpac
  *  @param completionBlock A block of code to run on completion.
  */
 - (void)showSuccessWithMessage:(NSString *)message
-                    completion:(void (^)(BOOL finished))completionBlock;
+                    completion:(void (^)(BOOL finished))completionBlock __attribute__((deprecated("Deprecated as of version 2.0. Use 'showSuccessWithMessage:inView:completion:' instead.")));
 
 
 #pragma mark - Error
 /**
  *  Show an error 'X', indicating failure/error.
+ *
+ *  @param containerView    The UIView to place the HUD in.
  */
-- (void)showError;
+- (void)showErrorInView:(UIView *)containerView;
+
+/**
+ *  Show an error 'X', indicating failure/error.
+ *
+ *  @param containerView    The UIView to place the HUD in.
+ */
+- (void)showError __attribute__((deprecated("Deprecated as of version 2.0. Use 'showErrorInView:' instead.")));
+
+/**
+ *  Show an error 'X' and run a block of code after it completes.
+ *
+ *  @param containerView    The UIView to place the HUD in.
+ *  @param completionBlock  A block of code to run on completion.
+ */
+- (void)showErrorInView:(UIView *)containerView
+         withCompletion:(void (^)(BOOL finished))completionBlock;
 
 /**
  *  Show an error 'X' and run a block of code after it completes.
  *
  *  @param completionBlock A block of code to run on completion.
  */
-- (void)showErrorWithCompletion:(void (^)(BOOL finished))completionBlock;
+- (void)showErrorWithCompletion:(void (^)(BOOL finished))completionBlock __attribute__((deprecated("Deprecated as of version 2.0. Use 'showErrorWithCompletion:inView:' instead.")));
+
+/**
+ *  Show an error 'X' with a message.
+ *
+ *  @param message          NSString message to display below the spinning BFRadialWaveView.
+ *  @param containerView    The UIView to place the HUD in.
+ */
+- (void)showErrorWithMessage:(NSString *)message
+                      inView:(UIView *)containerView;
 
 /**
  *  Show an error 'X' with a message.
  *
  *  @param message NSString message to display below the spinning BFRadialWaveView.
  */
-- (void)showErrorWithMessage:(NSString *)message;
+- (void)showErrorWithMessage:(NSString *)message __attribute__((deprecated("Deprecated as of version 2.0. Use 'showErrorWithMessage:inView:' instead.")));
+
+/**
+ *  Show an error 'X' with a message and run a block of code after it completes.
+ *
+ *  @param message          NSString message to display below the spinning BFRadialWaveView.
+ *  @param containerView    The UIView to place the HUD in.
+ *  @param completionBlock  A block of code to run on completion.
+ */
+- (void)showErrorWithMessage:(NSString *)message
+                      inView:(UIView *)containerView
+                  completion:(void (^)(BOOL finished))completionBlock;
 
 /**
  *  Show an error 'X' with a message and run a block of code after it completes.
@@ -141,7 +268,7 @@ extern CGFloat const BFRadialWaveHUD_CircleProgressViewToStatusLabelVerticalSpac
  *  @param completionBlock A block of code to run on completion.
  */
 - (void)showErrorWithMessage:(NSString *)message
-                  completion:(void (^)(BOOL finished))completionBlock;
+                  completion:(void (^)(BOOL finished))completionBlock __attribute__((deprecated("Deprecated as of version 2.0. Use 'showErrorWithMessage:completion:inView:' instead.")));
 
 
 #pragma mark - Dismiss

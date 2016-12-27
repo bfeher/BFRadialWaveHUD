@@ -1,12 +1,12 @@
 
 Pod::Spec.new do |s|
   s.name         = "BFRadialWaveHUD"
-  s.version      = "1.5.5"
+  s.version      = "2.0.0"
   s.summary      = "A progress HUD using BFRadialWaveView."
   s.homepage     = "https://github.com/bfeher/BFRadialWaveHUD"
   s.license      = { :type => 'MIT', :file => 'LICENSE.md' }
   s.author       = { "Bence Feher" => "ben.feher@gmail.com" }
-  s.source       = { :git => "https://github.com/bfeher/BFRadialWaveHUD.git", :tag => "1.5.5" }
+  s.source       = { :git => "https://github.com/bfeher/BFRadialWaveHUD.git", :tag => "2.0.0" }
   s.platform     = :ios, '7.0'
   s.dependency   'BFRadialWaveView'
   s.source_files = 'Classes/*.{h,m}', 'Categories/*.{h,m}'

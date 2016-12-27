@@ -3,7 +3,7 @@ BFRadialWaveHUD
 [![CocoaPods](https://img.shields.io/cocoapods/v/BFRadialWaveHUD.svg?style=flat)](https://github.com/bfeher/BFRadialWaveHUD)
 
 > A progress HUD using [BFRadialWaveView](https://github.com/bfeher/BFRadialWaveView).
-> Huge thanks to github user [@kevin-hirsch](https://github.com/kevin-hirsch) for making his amazing [KVNProgress](https://github.com/kevin-hirsch/KVNProgress) HUD available under the MIT license! Most of the actual HUD code, as well as ALL of the image processing code is from that project. Thanks again! 
+> Huge thanks to github user [@kevin-hirsch](https://github.com/kevin-hirsch) for making his amazing [KVNProgress](https://github.com/kevin-hirsch/KVNProgress) HUD available under the MIT license! Most of the actual HUD code, as well as ALL of the image processing code is from that project. Thanks again!
 <br />
 
 >_Click the screenshot below for an animated gifv!_<br />
@@ -53,7 +53,6 @@ Methods
 /**
  *  Custom initializer. Use this when you make a BFRadialWaveHUD in code.
  *
- *  @param containerView   The UIView to place the HUD in.
  *  @param fullscreen      BOOL flag to display in fullscreen or not.
  *  @param numberOfCircles NSInteger number of circles. Min = 3, Max = 20.
  *  @param circleColor     UIColor to set the circles' strokeColor to.
@@ -62,28 +61,31 @@ Methods
  *
  *  @return Returns a BFRadialWaveHUD! Aww yiss!
  */
-- (instancetype)initWithView:(UIView *)containerView
-                  fullScreen:(BOOL)fullscreen
-                     circles:(NSInteger)numberOfCircles
-                 circleColor:(UIColor *)circleColor
-                        mode:(BFRadialWaveHUDMode)mode
-                 strokeWidth:(CGFloat)strokeWidth;
+- (instancetype)initWithFullScreen:(BOOL)fullscreen
+                           circles:(NSInteger)numberOfCircles
+                       circleColor:(UIColor *)circleColor
+                              mode:(BFRadialWaveHUDMode)mode
+                       strokeWidth:(CGFloat)strokeWidth;
 ```
 
 ### Loading
 ```objective-c
 /**
  *  Show an indeterminate HUD.
+ *
+ *  @param containerView   The UIView to place the HUD in.
  */
-- (void)show;
+- (void)showInView:(UIView *)containerView;
 ```
 ```objective-c
 /**
  *  Show an indeterminate HUD with a message.
  *
- *  @param message NSString message to display below the spinning BFRadialWaveView.
+ *  @param message          NSString message to display below the spinning BFRadialWaveView.
+ *  @param containerView    The UIView to place the HUD in.
  */
-- (void)showWithMessage:(NSString *)message;
+- (void)showWithMessage:(NSString *)message
+                 inView:(UIView *)containerView;
 ```
 
 ### Progress
@@ -91,52 +93,64 @@ Methods
 /**
  *  Show a BFRadialWaveHUD with an extra circle for progress.
  *
- *  @param progress CGFloat progress (range [0.f, 1.f]) to show.
+ *  @param progress         CGFloat progress (range [0.f, 1.f]) to show.
+ *  @param containerView    The UIView to place the HUD in.
  */
-- (void)showProgress:(CGFloat)progress;
+- (void)showWithProgress:(CGFloat)progress
+                  inView:(UIView *)containerView;
 ```
 ```objective-c
 /**
  *  Show a BFRadialWaveHUD with an extra circle for progress with a message.
  *
- *  @param progress CGFloat progress (range [0.f, 1.f]) to show.
- *  @param message NSString message to display below the spinning BFRadialWaveView.
+ *  @param progress         CGFloat progress (range [0.f, 1.f]) to show.
+ *  @param message          NSString message to display below the spinning BFRadialWaveView.
+ *  @param containerView    The UIView to place the HUD in.
  */
-- (void)showProgress:(CGFloat)progress
-         withMessage:(NSString *)message;
+- (void)showWithProgress:(CGFloat)progress
+             withMessage:(NSString *)message
+                  inView:(UIView *)containerView;
 ```
 
 ### Success
 ```objective-c
 /**
  *  Show a success checkmark, indicating success.
+ *
+ *  @param containerView    The UIView to place the HUD in.
  */
-- (void)showSuccess;
+- (void)showSuccessInView:(UIView *)containerView;
 ```
 ```objective-c
 /**
  *  Show a success checkmark and run a block of code after it completes.
  *
- *  @param completionBlock A block of code to run on completion.
+ *  @param containerView    The UIView to place the HUD in.
+ *  @param completionBlock  A block of code to run on completion.
  */
-- (void)showSuccessWithCompletion:(void (^)(BOOL finished))completionBlock;
+- (void)showSuccessInView:(UIView *)containerView
+           withCompletion:(void (^)(BOOL finished))completionBlock;
 ```
 ```objective-c
 /**
  *  Show a success checkmark with a message.
  *
- *  @param message NSString message to display below the spinning BFRadialWaveView.
+ *  @param message          NSString message to display below the spinning BFRadialWaveView.
+ *  @param containerView    The UIView to place the HUD in.
  */
-- (void)showSuccessWithMessage:(NSString *)message;
+- (void)showSuccessWithMessage:(NSString *)message
+                        inView:(UIView *)containerView;
 ```
 ```objective-c
 /**
  *  Show a success checkmark with a message and run a block of code after it completes.
  *
- *  @param message NSString message to display below the spinning BFRadialWaveView.
- *  @param completionBlock A block of code to run on completion.
+ *  @param message          NSString message to display below the spinning BFRadialWaveView.
+ *  @param containerView    The UIView to place the HUD in.
+ *  @param completionBlock  A block of code to run on completion.
  */
 - (void)showSuccessWithMessage:(NSString *)message
+                        inView:(UIView *)containerView
                     completion:(void (^)(BOOL finished))completionBlock;
 ```
 
@@ -144,33 +158,41 @@ Methods
 ```objective-c
 /**
  *  Show an error 'X', indicating failure/error.
+ *
+ *  @param containerView    The UIView to place the HUD in.
  */
-- (void)showError;
+- (void)showErrorInView:(UIView *)containerView;
 ```
 ```objective-c
 /**
  *  Show an error 'X' and run a block of code after it completes.
  *
- *  @param completionBlock A block of code to run on completion.
+ *  @param containerView    The UIView to place the HUD in.
+ *  @param completionBlock  A block of code to run on completion.
  */
-- (void)showErrorWithCompletion:(void (^)(BOOL finished))completionBlock;
+- (void)showErrorInView:(UIView *)containerView
+         withCompletion:(void (^)(BOOL finished))completionBlock;
 ```
 ```objective-c
 /**
  *  Show an error 'X' with a message.
  *
- *  @param message NSString message to display below the spinning BFRadialWaveView.
+ *  @param message          NSString message to display below the spinning BFRadialWaveView.
+ *  @param containerView    The UIView to place the HUD in.
  */
-- (void)showErrorWithMessage:(NSString *)message;
+- (void)showErrorWithMessage:(NSString *)message
+                      inView:(UIView *)containerView;
 ```
 ```objective-c
 /**
  *  Show an error 'X' with a message and run a block of code after it completes.
  *
- *  @param message NSString message to display below the spinning BFRadialWaveView.
- *  @param completionBlock A block of code to run on completion.
+ *  @param message          NSString message to display below the spinning BFRadialWaveView.
+ *  @param containerView    The UIView to place the HUD in.
+ *  @param completionBlock  A block of code to run on completion.
  */
 - (void)showErrorWithMessage:(NSString *)message
+                      inView:(UIView *)containerView
                   completion:(void (^)(BOOL finished))completionBlock;
 ```
 
@@ -321,24 +343,22 @@ Add the contents of the three directories, `Categories`, `Classes`, and `Resourc
 ### Working Example
 ```objective-c
 // Create a HUD with default number of circles, default color, default mode, and default circle stroke width:
-BFRadialWaveHUD *hud = [[BFRadialWaveHUD alloc] initWithView:self.view
-                                                  fullScreen:NO
-                                                     circles:BFRadialWaveHUD_DefaultNumberOfCircles
-                                                 circleColor:nil
-                                                        mode:BFRadialWaveHUDMode_Default
-                                                 strokeWidth:BFRadialWaveHUD_DefaultCircleStrokeWidth];
+BFRadialWaveHUD *hud = [[BFRadialWaveHUD alloc] initWithFullScreen:NO
+                                                           circles:BFRadialWaveHUD_DefaultNumberOfCircles
+                                                       circleColor:nil
+                                                              mode:BFRadialWaveHUDMode_Default
+                                                       strokeWidth:BFRadialWaveHUD_DefaultCircleStrokeWidth];
 [hud show];
 ```
 
 ### Customized Example
 ```objective-c
-// Create a HUD with default number of circles, default color, default mode, and default circle stroke width:
-BFRadialWaveHUD *hud = [[BFRadialWaveHUD alloc] initWithView:self.view
-                                                  fullScreen:YES
-                                                     circles:10
-                                                 circleColor:[UIColor whiteColor]
-                                                        mode:BFRadialWaveHUDMode_South
-                                                 strokeWidth:4.f];
+// Create a very customized HUD:
+BFRadialWaveHUD *hud = [[BFRadialWaveHUD alloc] initWithFullScreen:YES
+                                                           circles:10
+                                                       circleColor:[UIColor whiteColor]
+                                                              mode:BFRadialWaveHUDMode_South
+                                                       strokeWidth:4.f];
 hud.blurBackground = YES; // default is NO
 hud.tapToDismiss = YES; // default is NO
 hud.progressCircleColor = [UIColor paperColorLightBlue];
